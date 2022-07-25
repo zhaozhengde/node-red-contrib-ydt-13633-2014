@@ -1,0 +1,16 @@
+{
+    "name" : "node-red-contrib-ydt-13633-2014",
+    "version": "1.0.0",
+    "description": "ydt-13633-2014",
+    "main": "ydt-13633-2014.js",
+    "node-red" : {
+        "nodes": {
+            "ydt-Lower-machine": "ydt-Lower-machine.js"
+        }
+    },
+    "keywords": [
+        "YDT"
+    ],
+    "author": "zhaozhengde",
+    "license": "UNLICENSED"
+}

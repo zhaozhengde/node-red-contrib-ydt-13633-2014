@@ -1,0 +1,3646 @@
+<script type="text/javascript">
+var functions = [{
+      v: "num",
+      t: "静态数据"
+    },
+    {
+      v: "global",
+      t: "变量"
+    }
+];
+var Global_LowerMachineType = "28";
+var ChangeFlag = false;
+var AnalogQuantityFixedPoint_Data_Group = {
+    28:[
+        {
+            name: "输出线/相电压AB/A",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "输出线/相电压BC/B",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "输出线/相电压CA/C",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "输出电流A",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "输出电流B",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "输出电流C",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "输出频率/转速",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "水温（水冷）",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "润滑油油温",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "润滑油油压",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "启动电池电压",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "输出功率",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "液（油）位",
+            datatype: functions[0].v,
+            datavalue: null
+        }
+    ],
+    20:[
+        {
+            name: "高压进线柜线/相电压AB/A",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "高压进线柜线/相电压BC/B",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "高压进线柜线/相电压CA/C",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "高压进线柜电流A",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "高压进线柜电流B",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "高压进线柜电流C",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "频率",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "功率因数",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "有功功率",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "无功功率",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "有功电量",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "无功电量",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "谐波",
+            datatype: functions[0].v,
+            datavalue: null
+        }
+    ]
+};
+var AnalogFloatingPoint_Data_Group = {
+    28:[
+        {
+            name: "输出线/相电压AB/A",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "输出线/相电压BC/B",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "输出线/相电压CA/C",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "输出电流A",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "输出电流B",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "输出电流C",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "输出频率/转速",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "水温（水冷）",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "润滑油油温",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "润滑油油压",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "启动电池电压",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "输出功率",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "液（油）位",
+            datatype: functions[0].v,
+            datavalue: null
+        }
+    ],
+    20:[
+        {
+            name: "高压进线柜线/相电压AB/A",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "高压进线柜线/相电压BC/B",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "高压进线柜线/相电压CA/C",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "高压进线柜电流A",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "高压进线柜电流B",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "高压进线柜电流C",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "频率",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "功率因数",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "有功功率",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "无功功率",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "有功电量",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "无功电量",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "谐波",
+            datatype: functions[0].v,
+            datavalue: null
+        }
+    ]
+};
+var Switching_Data_Group = {
+    28:[
+        {
+            name: "自动/手动状态",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "停机/运行状态",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "市电/油机ATS状态",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "主备油机",
+            datatype: functions[0].v,
+            datavalue: null
+        }
+    ],
+    20:[
+        {
+            name: "高压进线柜数量",
+            datatype: functions[0].v,
+            datavalue: null
+        }
+    ]
+};
+var Alarm_Data_Group = {
+    28:[
+        {
+            name: "交流线/相电压AB/A",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流线/相电压BC/B",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流线/相电压CA/C",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流电流A",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流电流B",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流电流C",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "频率/转速",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "水温（水冷）/皮带断裂（风冷）",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "润滑油油温",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "润滑油油压",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "启动失败",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "负载",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "启动电池电压",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "紧急停车",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "市电",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "充电器",
+            datatype: functions[0].v,
+            datavalue: null
+        }
+    ],
+    20:[
+        {
+            name: "充电器",
+            datatype: functions[0].v,
+            datavalue: null
+        }
+    ]
+};
+var ParameterFixedPoint_Data_Group = {
+    28:[
+        {
+            name: "交流线/相电压AB/A上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流线/相电压AB/A下限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流线/相电压BC/B上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流线/相电压BC/B下限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流线/相电压CA/C上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流线/相电压CA/C下限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流电流A上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流电流B上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流电流C上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "频率/转速上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "频率/转速下限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "润滑油油压下限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "润滑油油温上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "水温上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "电池电压上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "电池电压下限",
+            datatype: functions[0].v,
+            datavalue: null
+        }
+    ]
+};
+var ParameterFloatingPoint_Data_Group = {
+    28:[
+        {
+            name: "交流线/相电压AB/A上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流线/相电压AB/A下限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流线/相电压BC/B上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流线/相电压BC/B下限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流线/相电压CA/C上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流线/相电压CA/C下限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流电流A上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流电流B上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流电流C上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "频率/转速上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "频率/转速下限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "润滑油油压下限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "润滑油油温上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "水温上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "电池电压上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "电池电压下限",
+            datatype: functions[0].v,
+            datavalue: null
+        }
+    ]
+};
+var SetParametersFloatingPoint_Data_Group = {
+    28:[
+        {
+            name: "交流线/相电压AB/A上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流线/相电压AB/A下限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流线/相电压BC/B上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流线/相电压BC/B下限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流线/相电压CA/C上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流线/相电压CA/C下限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流电流A上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流电流B上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流电流C上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "频率/转速上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "频率/转速下限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "润滑油油压下限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "润滑油油温上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "水温上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "电池电压上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "电池电压下限",
+            datatype: functions[0].v,
+            datavalue: null
+        }
+    ]
+};
+var SetParametersFixedPoint_Data_Group = {
+    28:[
+        {
+            name: "交流线/相电压AB/A上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流线/相电压AB/A下限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流线/相电压BC/B上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流线/相电压BC/B下限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流线/相电压CA/C上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流线/相电压CA/C下限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流电流A上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流电流B上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "交流电流C上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "频率/转速上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "频率/转速下限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "润滑油油压下限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "润滑油油温上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "水温上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "电池电压上限",
+            datatype: functions[0].v,
+            datavalue: null
+        },
+        {
+            name: "电池电压下限",
+            datatype: functions[0].v,
+            datavalue: null
+        }
+    ]
+};
+    //注册节点
+    RED.nodes.registerType('ydt-Lower-machine',{
+        //节点类型
+        category: 'function',
+        //节点颜色
+        color: '#07a8a0',
+        //节点属性
+        defaults: {
+            //节点名称
+            name: {value:""},
+            //设备类型
+            LowerMachineType: {
+                value:"28",
+                required: true
+            },
+            //设备地址
+            DeviceAddress: {
+                value:"1",
+                required: true,
+                validate:RED.validators.regex(/^[1-9]$|^[0-9]\d$|^1\d{2}$|^2[0-5]$|^25[0-4]$/)//地址范围1-254
+            },
+            //设备版本
+            Version: {
+                value:"1.00",
+                required: true,
+                validate:RED.validators.regex(/^([1][0-5]|[1-9])(.([1][0-5]|[0][0-9])){1}$/)//协议版本号的范围为 00.00-15.15
+            },
+            //开关量变化标志
+            switch_status: {
+                value:"SwitchStatus",
+                required: true
+            },
+            //告警标志
+            alarm_status:{
+                value:"AlarmStatus",
+                required: true
+            },
+            //遥控数据
+            RemoteControl: {
+                value:"RemoteControl",
+                required: true
+            },
+            //厂家信息
+            ManufacturerInformation: {
+                value:"",
+                required: true
+            },
+            //厂家软件版本
+            ManufacturerEdition: {
+                value:"",
+                required: true
+            },
+            //厂家信息
+            ManufacturerDevice: {
+                value:"",
+                required: true
+            },
+            //时间
+            DatetimeGroup:{
+                value:"DateTimeNow",
+                required: true,
+            },
+            //历史数据浮点数
+            HistoricalDataFloatingPoint_Data: {
+                value:"HistoricalDataFloatingPoint",
+                required: true,
+            },
+            //历史数据浮点自定义数
+            HistoricalDataFloatingPoint_custom: {
+                value:"HistoricalDataFloatingPointCustom",
+                required: true,
+            },
+            //历史数据浮点自定义数数量
+            HistoricalDataFloatingPoint_Custom_num:{
+                value:"HistoricalDataFloatingPointCustomNum",
+                required: true,
+            },
+            //历史数据定点数
+            HistoricalDataFixedPoint_Data: {
+                value:"HistoricalDataFixedPoint",
+                required: true,
+            },
+            //历史数据定点自定义数
+            HistoricalDataFixedPoint_custom: {
+                value:"HistoricalDataFixedPointCustom",
+                required: true,
+            },
+            //历史数据定点自定义数数量
+            HistoricalDataFixedPoint_Custom_num:{
+                value:"HistoricalDataFixedPointCustomNum",
+                required: true,
+            },
+            //历史告警数
+            HistoricalAlarm_Data: {
+                value:"HistoricalAlarm",
+                required: true,
+            },
+            //历史告警自定义数
+            HistoricalAlarm_custom: {
+                value:"HistoricalAlarmCustom",
+                required: true,
+            },
+            //历史告警自定义数数量
+            HistoricalAlarm_Custom_num:{
+                value:"HistoricalAlarmCustomNum",
+                required: true,
+            },
+            //模拟量定点自定义数量
+            AnalogQuantityFixedPoint_Custom_num: {
+                value:1,
+                required: true,
+            },
+            //模拟量定点自定义数
+            AnalogQuantityFixedPoint_custom: {
+                value: [{
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                }],
+                //数据校验
+                validate: function (sequences) {
+                  if (!sequences || sequences.length === 0) {
+                    custom_num = $('#node-input-AnalogQuantityFixedPoint_Custom_num').val();
+                    if (custom_num > 0) {
+                        return false;
+                    }
+                    return true;
+                  }
+                  custom_num = $('#node-input-AnalogQuantityFixedPoint_Custom_num').val();
+                  if (custom_num != sequences.length) {
+                        return false;
+                  }
+                  for (var i = 0; i < sequences.length; i++) {
+                        var r = sequences[i];
+                        if ( !r.datavalue || r.datavalue == undefined || !r.name  || r.name == undefined) {
+                          return false;
+                        }
+                    }
+                  return true;
+                }
+              },
+            //模拟量定点数
+            AnalogQuantityFixedPoint_Data: {
+                value: [{
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                }],
+                //数据校验
+                validate: function (Datas) {
+                  for (var i = 0; i < Datas.length; i++) {
+                        var r = Datas[i];
+                        if ( !r.datavalue || r.datavalue == undefined || !r.name || r.name == undefined) {
+                          return false;
+                        }
+                    }
+                  return true;
+                }
+              },
+            //模拟量浮点自定义数数量
+            AnalogFloatingPoint_Custom_num: {
+                value:1,
+                required: true,
+            },
+            //模拟量浮点数
+            AnalogFloatingPoint_Data: {
+                value: [{
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                }],
+                //数据校验
+                validate: function (Datas) {
+                  for (var i = 0; i < Datas.length; i++) {
+                        var r = Datas[i];
+                        if ( !r.datavalue || r.datavalue == undefined || !r.name || r.name == undefined) {
+                          return false;
+                        }
+                    }
+                  return true;
+                }
+            },
+            //模拟量浮点自定义数
+            AnalogFloatingPoint_custom: {
+                value: [{
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                }],
+                //数据校验
+                validate: function (sequences) {
+                  if (!sequences || sequences.length === 0) {
+                    custom_num = $('#node-input-AnalogFloatingPoint_Custom_num').val();
+                    if (custom_num > 0) {
+                        return false;
+                    }
+                    return true;
+                  }
+                  /*custom_num = $('#node-input-AnalogFloatingPoint_Custom_num').val();
+                  if (custom_num != sequences.length) {
+                        return false;
+                  }*/ //节点加载后，由于数据数组需要开启设置才加载，会造成数组长度与数据数量值不一致的误判，本处注释不做判断
+                  for (var i = 0; i < sequences.length; i++) {
+                        var r = sequences[i];
+                        if ( !r.datavalue || r.datavalue == undefined || !r.name  || r.name == undefined) {
+                          return false;
+                        }
+                    }
+                  return true;
+                }
+              },
+            //开关量数
+            Switching_Data:{
+                value: [{
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                }],
+                //数据校验
+                validate: function (Datas) {
+                  for (var i = 0; i < Datas.length; i++) {
+                        var r = Datas[i];
+                        if ( !r.datavalue || r.datavalue == undefined || !r.name || r.name == undefined) {
+                          return false;
+                        }
+                    }
+                  return true;
+                }
+            },
+            //开关量自定义数
+            Switching_custom:{
+                value: [{
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                }],
+                //数据校验
+                validate: function (sequences) {
+                  if (!sequences || sequences.length === 0) {
+                    custom_num = $('#node-input-Switching_Custom_num').val();
+                    if (custom_num > 0) {
+                        return false;
+                    }
+                    return true;
+                  }
+                  /*custom_num = $('#node-input-Switching_Custom_num').val();
+                  if (custom_num != sequences.length) {
+                        return false;
+                  }*/
+                  for (var i = 0; i < sequences.length; i++) {
+                        var r = sequences[i];
+                        if ( !r.datavalue || r.datavalue == undefined || !r.name  || r.name == undefined) {
+                          return false;
+                        }
+                    }
+                  return true;
+                }
+            },
+            //开关量自定义数数量
+            Switching_Custom_num:{
+                value:1,
+                required: true,
+            },
+            //告警状态
+            Alarm_Data:{
+                value: [{
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                }],
+                //数据校验
+                validate: function (Datas) {
+                  for (var i = 0; i < Datas.length; i++) {
+                        var r = Datas[i];
+                        if ( !r.datavalue || r.datavalue == undefined || !r.name || r.name == undefined) {
+                          return false;
+                        }
+                    }
+                  return true;
+                }
+            },
+            //告警状态自定义数
+            Alarm_custom:{
+                value: [{
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                }],
+                //数据校验
+                validate: function (sequences) {
+                  if (!sequences || sequences.length === 0) {
+                    custom_num = $('#node-input-Alarm_Custom_num').val();
+                    if (custom_num > 0) {
+                        return false;
+                    }
+                    return true;
+                  }
+                  /*custom_num = $('#node-input-Alarm_Custom_num').val();
+                  if (custom_num != sequences.length) {
+                        return false;
+                  }*/
+                  for (var i = 0; i < sequences.length; i++) {
+                        var r = sequences[i];
+                        if ( !r.datavalue || r.datavalue == undefined || !r.name  || r.name == undefined) {
+                          return false;
+                        }
+                    }
+                  return true;
+                }
+            },
+            //告警状态自定义数数量
+            Alarm_Custom_num:{
+                value:1,
+                required: true,
+            },
+            //参数定点数
+            ParameterFixedPoint_Data: {
+                value: [{
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                }],
+                //数据校验
+                validate: function (Datas) {
+                  for (var i = 0; i < Datas.length; i++) {
+                        var r = Datas[i];
+                        if ( !r.datavalue || r.datavalue == undefined || !r.name || r.name == undefined) {
+                          return false;
+                        }
+                    }
+                  return true;
+                }
+            },
+            //参数定点自定义数
+            ParameterFixedPoint_custom: {
+                value: [{
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                }],
+                //数据校验
+                validate: function (sequences) {
+                  if (!sequences || sequences.length === 0) {
+                    custom_num = $('#node-input-ParameterFixedPoint_Custom_num').val();
+                    if (custom_num > 0) {
+                        return false;
+                    }
+                    return true;
+                  }
+                  /*custom_num = $('#node-input-ParameterFixedPoint_Custom_num').val();
+                  if (custom_num != sequences.length) {
+                        return false;
+                  }*/
+                  for (var i = 0; i < sequences.length; i++) {
+                        var r = sequences[i];
+                        if ( !r.datavalue || r.datavalue == undefined || !r.name  || r.name == undefined) {
+                          return false;
+                        }
+                    }
+                  return true;
+                }
+            },
+            //参数定点自定义数数量
+            ParameterFixedPoint_Custom_num:{
+                value:1,
+                required: true,
+            },
+            //参数浮点数
+            ParameterFloatingPoint_Data: {
+                value: [{
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                }],
+                //数据校验
+                validate: function (Datas) {
+                  for (var i = 0; i < Datas.length; i++) {
+                        var r = Datas[i];
+                        if ( !r.datavalue || r.datavalue == undefined || !r.name || r.name == undefined) {
+                          return false;
+                        }
+                    }
+                  return true;
+                }
+            },
+            //参数浮点自定义数
+            ParameterFloatingPoint_custom: {
+                value: [{
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                }],
+                //数据校验
+                validate: function (sequences) {
+                  if (!sequences || sequences.length === 0) {
+                    custom_num = $('#node-input-ParameterFloatingPoint_Custom_num').val();
+                    if (custom_num > 0) {
+                        return false;
+                    }
+                    return true;
+                  }
+                  /*custom_num = $('#node-input-ParameterFloatingPoint_Custom_num').val();
+                  if (custom_num != sequences.length) {
+                        return false;
+                  }*/
+                  for (var i = 0; i < sequences.length; i++) {
+                        var r = sequences[i];
+                        if ( !r.datavalue || r.datavalue == undefined || !r.name  || r.name == undefined) {
+                          return false;
+                        }
+                    }
+                  return true;
+                }
+            },
+            //参数浮点自定义数数量
+            ParameterFloatingPoint_Custom_num:{
+                value:1,
+                required: true,
+            },
+            //设置参数浮点数
+            SetParametersFloatingPoint_Data: {
+                value: [{
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                }],
+                //数据校验
+                validate: function (Datas) {
+                  for (var i = 0; i < Datas.length; i++) {
+                        var r = Datas[i];
+                        if ( !r.datavalue || r.datavalue == undefined || !r.name || r.name == undefined) {
+                          return false;
+                        }
+                    }
+                  return true;
+                }
+            },
+            //设置参数浮点自定义数
+            SetParametersFloatingPoint_custom: {
+                value: [{
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                }],
+                //数据校验
+                validate: function (sequences) {
+                  if (!sequences || sequences.length === 0) {
+                    custom_num = $('#node-input-SetParametersFloatingPoint_Custom_num').val();
+                    if (custom_num > 0) {
+                        return false;
+                    }
+                    return true;
+                  }
+                  /*custom_num = $('#node-input-SetParametersFloatingPoint_Custom_num').val();
+                  if (custom_num != sequences.length) {
+                        return false;
+                  }*/
+                  for (var i = 0; i < sequences.length; i++) {
+                        var r = sequences[i];
+                        if ( !r.datavalue || r.datavalue == undefined || !r.name  || r.name == undefined) {
+                          return false;
+                        }
+                    }
+                  return true;
+                }
+            },
+            //设置参数浮点自定义数数量
+            SetParametersFloatingPoint_Custom_num:{
+                value:1,
+                required: true,
+            },
+            //设置参数定点数
+            SetParametersFixedPoint_Data: {
+                value: [{
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                }],
+                //数据校验
+                validate: function (Datas) {
+                  for (var i = 0; i < Datas.length; i++) {
+                        var r = Datas[i];
+                        if ( !r.datavalue || r.datavalue == undefined || !r.name || r.name == undefined) {
+                          return false;
+                        }
+                    }
+                  return true;
+                }
+            },
+            //设置参数定点自定义数
+            SetParametersFixedPoint_custom: {
+                value: [{
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                }],
+                //数据校验
+                validate: function (sequences) {
+                  if (!sequences || sequences.length === 0) {
+                    custom_num = $('#node-input-SetParametersFixedPoint_Custom_num').val();
+                    if (custom_num > 0) {
+                        return false;
+                    }
+                    return true;
+                  }
+                  /*custom_num = $('#node-input-SetParametersFixedPoint_Custom_num').val();
+                  if (custom_num != sequences.length) {
+                        return false;
+                  }*/
+                  for (var i = 0; i < sequences.length; i++) {
+                        var r = sequences[i];
+                        if ( !r.datavalue || r.datavalue == undefined || !r.name  || r.name == undefined) {
+                          return false;
+                        }
+                    }
+                  return true;
+                }
+            },
+            //设置参数定点自定义数数量
+            SetParametersFixedPoint_Custom_num:{
+                value:1,
+                required: true,
+            },
+            
+            //用户自定义数
+            User_custom: {
+                value: [{
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                }],
+                //数据校验
+                validate: function (sequences) {
+                  let custom_num = $('#node-input-User_Custom_num').val();
+                  if (!sequences || sequences.length === 0) {
+                    if (custom_num > 0) {
+                        return false;
+                    }
+                    return true;
+                  }
+                  /*if (custom_num != sequences.length) {
+                        return false;
+                  }*/
+                  for (var i = 0; i < sequences.length; i++) {
+                        var r = sequences[i];
+                        if ( !r.datavalue || r.datavalue == undefined || !r.name  || r.name == undefined) {
+                          return false;
+                        }
+                    }
+                  return true;
+                }
+            },
+            //设置参数浮点自定义数数量
+            User_Custom_num:{
+                value:1,
+                required: true,
+            },
+        },
+        //节点输入数
+        inputs:1,
+        //节点输出数
+        outputs:4,
+        //节点图标
+        icon: "chunphy.png",//"font-awesome/fa-battery-full",//"serial.svg",
+        //节点显示标签
+        label: function() {
+            return this.name||"ydt-Lower-machine";
+        },
+        //鼠标悬停输入输出提示字符
+        inputLabels:'数据流输入',
+        outputLabels: ["输出数据到串口","输出遥控参数","输出设置参数","时间设置输出"],
+         //节点属性输入框
+        oneditprepare:function() {
+            //tab切换
+            let tabs = RED.tabs.create({
+                id: "node-input-ydt-tabs",
+                onchange: function (tab) {
+                  $("#node-input-tabs-content").children().hide();
+                  $("#" + tab.id).show();
+                }
+              })
+
+              tabs.addTab({
+                id: "lower-machine-settings-tab",
+                label: "下位机参数设置"
+              })
+
+              tabs.addTab({
+                id: "data-options-tab",
+                label: "下位机数据设置"
+              })
+
+              tabs.addTab({
+                id: "data-history-tab",
+                label: "下位机历史数据设置"
+              }) 
+
+            //下拉菜单
+            $("#node-input-LowerMachineType").typedInput({type:"LowerMachineType", types:[{
+                value: "LowerMachineTypeNum",
+                options: [
+                    { value: "28", label: "柴油发电机"},
+                    { value: "20", label: "高压配电系统"}
+                ]
+            }]})
+            //时间
+            $("#node-input-DatetimeGroup").typedInput({
+                types: ["global"]
+            });
+            //遥控
+            $("#node-input-RemoteControl").typedInput({
+                types: ["global"]
+            });
+            //告警
+            $("#node-input-alarm_status").typedInput({
+                types: ["global"]
+            });
+            //开关量变化
+            $("#node-input-switch_status").typedInput({
+                types: ["global"]
+            });
+            //历史数据浮点数
+            $("#node-input-HistoricalDataFloatingPoint_Data").typedInput({
+                types: ["global"]
+            });
+            //历史数据浮点自定义数
+            $("#node-input-HistoricalDataFloatingPoint_custom").typedInput({
+                types: ["global"]
+            });
+            //历史数据浮点自定义数数量
+            $("#node-input-HistoricalDataFloatingPoint_Custom_num").typedInput({
+                types: ["global"]
+            });
+            //历史数据定点数
+            $("#node-input-HistoricalDataFixedPoint_Data").typedInput({
+                types: ["global"]
+            });
+            //历史数据定点自定义数
+            $("#node-input-HistoricalDataFixedPoint_custom").typedInput({
+                types: ["global"]
+            });
+            //历史数据定点自定义数数量
+            $("#node-input-HistoricalDataFixedPoint_Custom_num").typedInput({
+                types: ["global"]
+            });
+            //历史告警数
+            $("#node-input-HistoricalAlarm_Data").typedInput({
+                types: ["global"]
+            });
+            //历史告警自定义数
+            $("#node-input-HistoricalAlarm_custom").typedInput({
+                types: ["global"]
+            });
+            //历史告警自定义数数量
+            $("#node-input-HistoricalAlarm_Custom_num").typedInput({
+                types: ["global"]
+            });
+            let node = this;
+            //变更设备类型后数据列表更新
+            $("#node-input-LowerMachineType").on('change', function() {
+               if (ChangeFlag == false) {
+                    ChangeFlag = true;
+                    //防止赋值时误触发
+               } else{
+                    if(Global_LowerMachineType != $(this).val()){
+                        Global_LowerMachineType = $(this).val();//获取设备编号
+                //模拟量定点数
+                        $('#node-input-AnalogQuantityFixedPoint-Data-container').editableList('empty');
+                        //根据当前设置的设备类型重新添加数据
+                        let sequenceMsg = AnalogQuantityFixedPoint_Data_Group[Global_LowerMachineType];
+                        //console.log(AnalogQuantityFixedPoint_Data_Group['29'])
+                        for (var i = 0; i < sequenceMsg.length; i++) {
+
+                            $("#node-input-AnalogQuantityFixedPoint-Data-container").editableList('addItem', sequenceMsg[i]);
+                        }
+                        //清空模拟量定点数自定义栏
+                        $('#node-input-AnalogQuantityFixedPoint-custom-container').editableList('empty');
+                        let sequenceMsg_custom = [{
+                          name: null,
+                          datatype: functions[0].v,
+                          datavalue: null
+                        }];
+                        //根据当前设置的设备类型重新添加自定义数据
+                        for (var i = 0; i < sequenceMsg_custom.length; i++) {
+                                $("#node-input-AnalogQuantityFixedPoint-custom-container").editableList('addItem', sequenceMsg_custom[i]);
+                        }
+                //模拟量浮点数
+                        //清空模拟量浮点数栏
+                        $('#node-input-AnalogFloatingPoint-Data-container').editableList('empty');
+                        //根据当前设置的设备类型重新添加数据
+                        let AnalogFloatingPoint_sequenceMsg = AnalogFloatingPoint_Data_Group[Global_LowerMachineType];
+                        for (var i = 0; i < AnalogFloatingPoint_sequenceMsg.length; i++) {
+
+                            $("#node-input-AnalogFloatingPoint-Data-container").editableList('addItem', AnalogFloatingPoint_sequenceMsg[i]);
+                        }
+                        //清空模拟量浮点数自定义栏
+                    //
+                        $('#node-input-AnalogFloatingPoint-custom-container').editableList('empty');
+                        let AnalogFloatingPoint_sequenceMsg_custom = [{
+                          name: null,
+                          datatype: functions[0].v,
+                          datavalue: null
+                        }];
+                        //根据当前设置的设备类型重新添加自定义数据
+                        for (var i = 0; i < AnalogFloatingPoint_sequenceMsg_custom.length; i++) {
+                            $("#node-input-AnalogFloatingPoint-custom-container").editableList('addItem', AnalogFloatingPoint_sequenceMsg_custom[i]);
+                        }
+                //开关量
+                        //清空开关量栏
+                        $('#node-input-Switching-Data-container').editableList('empty');
+                        //根据当前设置的设备类型重新添加数据
+                        let Switching_sequenceMsg = Switching_Data_Group[Global_LowerMachineType];
+                        for (var i = 0; i < Switching_sequenceMsg.length; i++) {
+
+                            $("#node-input-Switching-Data-container").editableList('addItem', Switching_sequenceMsg[i]);
+                        }
+                        //清空开关量自定义栏
+                        $('#node-input-Switching-custom-container').editableList('empty');
+                        let Switching_sequenceMsg_custom = [{
+                          name: null,
+                          datatype: functions[0].v,
+                          datavalue: null
+                        }];
+                        //根据当前设置的设备类型重新添加自定义数据
+                        for (var i = 0; i < Switching_sequenceMsg_custom.length; i++) {
+                            $("#node-input-Switching-custom-container").editableList('addItem', Switching_sequenceMsg_custom[i]);
+                        }
+                //告警
+                        //清空告警栏
+                        $('#node-input-Alarm-Data-container').editableList('empty');
+                        //根据当前设置的设备类型重新添加数据
+                        let Alarm_sequenceMsg = Alarm_Data_Group[Global_LowerMachineType];
+                        for (var i = 0; i < Alarm_sequenceMsg.length; i++) {
+
+                            $("#node-input-Alarm-Data-container").editableList('addItem', Alarm_sequenceMsg[i]);
+                        }
+                        //清空告警自定义栏
+                        $('#node-input-Alarm-custom-container').editableList('empty');
+                        let Alarm_sequenceMsg_custom = [{
+                          name: null,
+                          datatype: functions[0].v,
+                          datavalue: null
+                        }];
+                        //根据当前设置的设备类型重新添加自定义数据
+                        for (var i = 0; i < Alarm_sequenceMsg_custom.length; i++) {
+                            $("#node-input-Alarm-custom-container").editableList('addItem', Alarm_sequenceMsg_custom[i]);
+                        }
+                //获取参数定点数
+                        //清空获取参数定点数栏
+                        $('#node-input-ParameterFixedPoint-Data-container').editableList('empty');
+                        //根据当前设置的设备类型重新添加数据
+                        let ParameterFixedPoint_sequenceMsg = ParameterFixedPoint_Data_Group[Global_LowerMachineType];
+                        for (var i = 0; i < ParameterFixedPoint_sequenceMsg.length; i++) {
+
+                            $("#node-input-ParameterFixedPoint-Data-container").editableList('addItem', ParameterFixedPoint_sequenceMsg[i]);
+                        }
+                        //清空获取参数定点数自定义栏
+                        $('#node-input-ParameterFixedPoint-custom-container').editableList('empty');
+                        let ParameterFixedPoint_sequenceMsg_custom = [{
+                          name: null,
+                          datatype: functions[0].v,
+                          datavalue: null
+                        }];
+                        //根据当前设置的设备类型重新添加自定义数据
+                        for (var i = 0; i < ParameterFixedPoint_sequenceMsg_custom.length; i++) {
+                            $("#node-input-ParameterFixedPoint-custom-container").editableList('addItem', ParameterFixedPoint_sequenceMsg_custom[i]);
+                        }
+                //获取参数浮点数
+                        //清空获取参数浮点数栏
+                        $('#node-input-ParameterFloatingPoint-Data-container').editableList('empty');
+                        //根据当前设置的设备类型重新添加数据
+                        let ParameterFloatingPoint_sequenceMsg = ParameterFloatingPoint_Data_Group[Global_LowerMachineType];
+                        for (var i = 0; i < ParameterFloatingPoint_sequenceMsg.length; i++) {
+
+                            $("#node-input-ParameterFloatingPoint-Data-container").editableList('addItem', ParameterFloatingPoint_sequenceMsg[i]);
+                        }
+                        //清空获取参数浮点数自定义栏
+                        $('#node-input-ParameterFloatingPoint-custom-container').editableList('empty');
+                        let ParameterFloatingPoint_sequenceMsg_custom = [{
+                          name: null,
+                          datatype: functions[0].v,
+                          datavalue: null
+                        }];
+                        //根据当前设置的设备类型重新添加自定义数据
+                        for (var i = 0; i < ParameterFloatingPoint_sequenceMsg_custom.length; i++) {
+                            $("#node-input-ParameterFloatingPoint-custom-container").editableList('addItem', ParameterFloatingPoint_sequenceMsg_custom[i]);
+                        }
+                //设置参数浮点数
+                        //清空设置参数浮点数栏
+                        $('#node-input-SetParametersFloatingPoint-Data-container').editableList('empty');
+                        //根据当前设置的设备类型重新添加数据
+                        let SetParametersFloatingPoint_sequenceMsg = SetParametersFloatingPoint_Data_Group[Global_LowerMachineType];
+                        for (var i = 0; i < SetParametersFloatingPoint_sequenceMsg.length; i++) {
+
+                            $("#node-input-SetParametersFloatingPoint-Data-container").editableList('addItem', SetParametersFloatingPoint_sequenceMsg[i]);
+                        }
+                        //清空设置参数浮点数自定义栏
+                        $('#node-input-SetParametersFloatingPoint-custom-container').editableList('empty');
+                        let SetParametersFloatingPoint_sequenceMsg_custom = [{
+                          name: null,
+                          datatype: functions[0].v,
+                          datavalue: null
+                        }];
+                        //根据当前设置的设备类型重新添加自定义数据
+                        for (var i = 0; i < SetParametersFloatingPoint_sequenceMsg_custom.length; i++) {
+                            $("#node-input-SetParametersFloatingPoint-custom-container").editableList('addItem', SetParametersFloatingPoint_sequenceMsg_custom[i]);
+                        }
+                //设置参数定点数
+                        //清空设置参数定点数栏
+                        $('#node-input-SetParametersFixedPoint-Data-container').editableList('empty');
+                        //根据当前设置的设备类型重新添加数据
+                        let SetParametersFixedPoint_sequenceMsg = SetParametersFixedPoint_Data_Group[Global_LowerMachineType];
+                        for (var i = 0; i < SetParametersFixedPoint_sequenceMsg.length; i++) {
+
+                            $("#node-input-SetParametersFixedPoint-Data-container").editableList('addItem', SetParametersFixedPoint_sequenceMsg[i]);
+                        }
+                        //清空设置参数定点数自定义栏
+                        $('#node-input-SetParametersFixedPoint-custom-container').editableList('empty');
+                        let SetParametersFixedPoint_sequenceMsg_custom = [{
+                          name: null,
+                          datatype: functions[0].v,
+                          datavalue: null
+                        }];
+                        //根据当前设置的设备类型重新添加自定义数据
+                        for (var i = 0; i < SetParametersFixedPoint_sequenceMsg_custom.length; i++) {
+                            $("#node-input-SetParametersFixedPoint-custom-container").editableList('addItem', SetParametersFixedPoint_sequenceMsg_custom[i]);
+                        }
+                //用户自定义数
+                        //清空设置参数定点数自定义栏
+                        $('#node-input-User-custom-container').editableList('empty');
+                        let User_sequenceMsg_custom = [{
+                          name: null,
+                          datatype: functions[0].v,
+                          datavalue: null
+                        }];
+                        //根据当前设置的设备类型重新添加自定义数据
+                        for (var i = 0; i < User_sequenceMsg_custom.length; i++) {
+                            $("#node-input-User-custom-container").editableList('addItem', User_sequenceMsg_custom[i]);
+                        }
+                    }
+               }
+            });
+                    
+            $('#analog-quantity-fixed-point').hide();
+            $('#analog-floating-point').hide();
+            $('#analog-Switching').hide();
+            $('#analog-Alarm').hide();
+            $('#analog-ParameterFixedPoint').hide();
+            $('#analog-ParameterFloatingPoint').hide();
+            $('#analog-SetParametersFixedPoint').hide();
+            $('#analog-SetParametersFloatingPoint').hide();
+            $('#analog-User').hide();
+
+            //列表收展
+            $('#show-quantity-fixed-props').click(function(_e) {
+                $('#analog-quantity-fixed-point').toggle()
+                if ( $('#analog-quantity-fixed-point').is(':visible') ) {
+                    $('#show-quantity-fixed-props').html('<i class="fa fa-caret-down"></i> 模拟量定点数')
+                } else {
+                    $('#show-quantity-fixed-props').html('<i class="fa fa-caret-right"></i> 模拟量定点数')
+                }
+            })
+            $('#show-floating-props').click(function(_e) {
+                $('#analog-floating-point').toggle()
+                if ( $('#analog-floating-point').is(':visible') ) {
+                    $('#show-floating-props').html('<i class="fa fa-caret-down"></i> 模拟量浮点数')
+                } else {
+                    $('#show-floating-props').html('<i class="fa fa-caret-right"></i> 模拟量浮点数')
+                }
+            })
+            $('#show-Switching-props').click(function(_e) {
+                $('#analog-Switching').toggle()
+                if ( $('#analog-Switching').is(':visible') ) {
+                    $('#show-Switching-props').html('<i class="fa fa-caret-down"></i> 开关量状态')
+                } else {
+                    $('#show-Switching-props').html('<i class="fa fa-caret-right"></i> 开关量状态')
+                }
+            })
+            $('#show-Alarm-props').click(function(_e) {
+                $('#analog-Alarm').toggle()
+                if ( $('#analog-Alarm').is(':visible') ) {
+                    $('#show-Alarm-props').html('<i class="fa fa-caret-down"></i> 告警')
+                } else {
+                    $('#show-Alarm-props').html('<i class="fa fa-caret-right"></i> 告警')
+                }
+            })
+            $('#show-ParameterFixedPoint-props').click(function(_e) {
+                $('#analog-ParameterFixedPoint').toggle()
+                if ( $('#analog-ParameterFixedPoint').is(':visible') ) {
+                    $('#show-ParameterFixedPoint-props').html('<i class="fa fa-caret-down"></i> 获取参数定点数')
+                } else {
+                    $('#show-ParameterFixedPoint-props').html('<i class="fa fa-caret-right"></i> 获取参数定点数')
+                }
+            })
+            $('#show-ParameterFloatingPoint-props').click(function(_e) {
+                $('#analog-ParameterFloatingPoint').toggle()
+                if ( $('#analog-ParameterFloatingPoint').is(':visible') ) {
+                    $('#show-ParameterFloatingPoint-props').html('<i class="fa fa-caret-down"></i> 获取参数浮点数')
+                } else {
+                    $('#show-ParameterFloatingPoint-props').html('<i class="fa fa-caret-right"></i> 获取参数浮点数')
+                }
+            })
+            $('#show-SetParametersFixedPoint-props').click(function(_e) {
+                $('#analog-SetParametersFixedPoint').toggle()
+                if ( $('#analog-SetParametersFixedPoint').is(':visible') ) {
+                    $('#show-SetParametersFixedPoint-props').html('<i class="fa fa-caret-down"></i> 设置参数定点数')
+                } else {
+                    $('#show-SetParametersFixedPoint-props').html('<i class="fa fa-caret-right"></i> 设置参数定点数')
+                }
+            })
+            $('#show-SetParametersFloatingPoint-props').click(function(_e) {
+                $('#analog-SetParametersFloatingPoint').toggle()
+                if ( $('#analog-SetParametersFloatingPoint').is(':visible') ) {
+                    $('#show-SetParametersFloatingPoint-props').html('<i class="fa fa-caret-down"></i> 设置参数浮点数')
+                } else {
+                    $('#show-SetParametersFloatingPoint-props').html('<i class="fa fa-caret-right"></i> 设置参数浮点数')
+                }
+            })
+            $('#show-User-props').click(function(_e) {
+                $('#analog-User').toggle()
+                if ( $('#analog-User').is(':visible') ) {
+                    $('#show-User-props').html('<i class="fa fa-caret-down"></i> 用户自定义数据')
+                } else {
+                    $('#show-User-props').html('<i class="fa fa-caret-right"></i> 用户自定义数据')
+                }
+            })
+    //模拟量定点数
+            //模拟量定点数自定义栏
+            $('#node-input-AnalogQuantityFixedPoint-custom-container').css('min-width', '450px').editableList({
+                addItem: function (row, index, data) {
+                  let sequence = data;
+
+                  if (!sequence.hasOwnProperty('name')) {
+                    sequence = {
+                      name: null,
+                      datatype: functions[0].v,
+                      datavalue: null
+                    };
+                  }
+
+                  row.css({
+                    overflow: 'hidden',
+                    whiteSpace: 'nowrap'
+                  });
+
+                  let fragment = document.createDocumentFragment();
+                  let row0 = $('<div/>', {
+                      class: "form-row",
+                    })
+                    .appendTo(fragment);
+                  let sequenceNameProperty = $('<input/>', {
+                      class: "node-input-sequencename",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数据名称"
+                    })
+                    .appendTo(row0)
+
+                  let selectFunctionProperty = $('<select/>', {
+                      class: "node-input-datatype",
+                      style: "width:30%;",
+                    })
+                    .appendTo(row0);
+
+                  for (var i = 0; i < 2; i++) {
+                    selectFunctionProperty.append($("<option></option>").val(functions[i].v).text(functions[i].t));
+                  }
+
+                  let datavalueProperty = $('<input/>', {
+                      class: "node-input-datavalue",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数值或变量名称"
+                    })
+                    .appendTo(row0)
+
+                  sequenceNameProperty.val(sequence.name);
+                  selectFunctionProperty.val(sequence.datatype);
+                  datavalueProperty.val(sequence.datavalue);
+
+                  selectFunctionProperty.change();
+
+                  row[0].appendChild(fragment);
+
+                },
+                removable: true,
+                sortable: true
+
+              });
+             //模拟量定点数栏
+             $('#node-input-AnalogQuantityFixedPoint-Data-container').css('min-width', '450px').editableList({
+                addItem: function (row, index, data) {
+                  let sequence = data;
+
+                  row.css({
+                    overflow: 'hidden',
+                    whiteSpace: 'nowrap'
+                  });
+
+                  let fragment = document.createDocumentFragment();
+                  let row0 = $('<div/>', {
+                      class: "form-row",
+                    })
+                    .appendTo(fragment);
+                  let sequenceNameProperty = $('<label/>', {
+                      class: "node-input-sequencename",
+                      style: "width:30%;"
+                    })
+                    .appendTo(row0)
+
+                  let selectFunctionProperty = $('<select/>', {
+                      class: "node-input-datatype",
+                      style: "width:30%;",
+                    })
+                    .appendTo(row0);
+
+                  for (var i = 0; i < 2; i++) {
+                    selectFunctionProperty.append($("<option></option>").val(functions[i].v).text(functions[i].t));
+                  }
+
+                  let datavalueProperty = $('<input/>', {
+                      class: "node-input-datavalue",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数值或变量名称"
+                    })
+                    .appendTo(row0)
+                  sequenceNameProperty.text(sequence.name);
+                  selectFunctionProperty.val(sequence.datatype);
+                  datavalueProperty.val(sequence.datavalue);
+
+                  selectFunctionProperty.change();
+
+                  row[0].appendChild(fragment);
+
+                },
+                removable: false,
+                sortable: false,
+                addButton: false
+
+              })
+    //模拟量浮点数
+              //模拟量浮点数自定义栏
+            $('#node-input-AnalogFloatingPoint-custom-container').css('min-width', '450px').editableList({
+                addItem: function (row, index, data) {
+                  let sequence = data;
+
+                  if (!sequence.hasOwnProperty('name')) {
+                    sequence = {
+                      name: null,
+                      datatype: functions[0].v,
+                      datavalue: null
+                    };
+                  }
+
+                  row.css({
+                    overflow: 'hidden',
+                    whiteSpace: 'nowrap'
+                  });
+
+                  let fragment = document.createDocumentFragment();
+                  let row0 = $('<div/>', {
+                      class: "form-row",
+                    })
+                    .appendTo(fragment);
+                  let sequenceNameProperty = $('<input/>', {
+                      class: "node-input-sequencename",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数据名称"
+                    })
+                    .appendTo(row0)
+
+                  let selectFunctionProperty = $('<select/>', {
+                      class: "node-input-datatype",
+                      style: "width:30%;",
+                    })
+                    .appendTo(row0);
+
+                  for (var i = 0; i < 2; i++) {
+                    selectFunctionProperty.append($("<option></option>").val(functions[i].v).text(functions[i].t));
+                  }
+
+                  let datavalueProperty = $('<input/>', {
+                      class: "node-input-datavalue",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数值或变量名称"
+                    })
+                    .appendTo(row0)
+
+                  sequenceNameProperty.val(sequence.name);
+                  selectFunctionProperty.val(sequence.datatype);
+                  datavalueProperty.val(sequence.datavalue);
+
+                  selectFunctionProperty.change();
+
+                  row[0].appendChild(fragment);
+
+                },
+                removable: true,
+                sortable: true
+
+              });
+             //模拟量浮点数栏
+             $('#node-input-AnalogFloatingPoint-Data-container').css('min-width', '450px').editableList({
+                addItem: function (row, index, data) {
+                  let sequence = data;
+
+                  row.css({
+                    overflow: 'hidden',
+                    whiteSpace: 'nowrap'
+                  });
+
+                  let fragment = document.createDocumentFragment();
+                  let row0 = $('<div/>', {
+                      class: "form-row",
+                    })
+                    .appendTo(fragment);
+                  let sequenceNameProperty = $('<label/>', {
+                      class: "node-input-sequencename",
+                      style: "width:30%;"
+                    })
+                    .appendTo(row0)
+
+                  let selectFunctionProperty = $('<select/>', {
+                      class: "node-input-datatype",
+                      style: "width:30%;",
+                    })
+                    .appendTo(row0);
+
+                  for (var i = 0; i < 2; i++) {
+                    selectFunctionProperty.append($("<option></option>").val(functions[i].v).text(functions[i].t));
+                  }
+
+                  let datavalueProperty = $('<input/>', {
+                      class: "node-input-datavalue",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数值或变量名称"
+                    })
+                    .appendTo(row0)
+
+                  sequenceNameProperty.text(sequence.name);
+                  selectFunctionProperty.val(sequence.datatype);
+                  datavalueProperty.val(sequence.datavalue);
+
+                  selectFunctionProperty.change();
+
+                  row[0].appendChild(fragment);
+
+                },
+                removable: false,
+                sortable: false,
+                addButton: false
+
+              })
+    //开关量
+              //开关量自定义栏
+            $('#node-input-Switching-custom-container').css('min-width', '450px').editableList({
+                addItem: function (row, index, data) {
+                  let sequence = data;
+
+                  if (!sequence.hasOwnProperty('name')) {
+                    sequence = {
+                      name: null,
+                      datatype: functions[0].v,
+                      datavalue: null
+                    };
+                  }
+
+                  row.css({
+                    overflow: 'hidden',
+                    whiteSpace: 'nowrap'
+                  });
+
+                  let fragment = document.createDocumentFragment();
+                  let row0 = $('<div/>', {
+                      class: "form-row",
+                    })
+                    .appendTo(fragment);
+                  let sequenceNameProperty = $('<input/>', {
+                      class: "node-input-sequencename",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数据名称"
+                    })
+                    .appendTo(row0)
+
+                  let selectFunctionProperty = $('<select/>', {
+                      class: "node-input-datatype",
+                      style: "width:30%;",
+                    })
+                    .appendTo(row0);
+
+                  for (var i = 0; i < 2; i++) {
+                    selectFunctionProperty.append($("<option></option>").val(functions[i].v).text(functions[i].t));
+                  }
+
+                  let datavalueProperty = $('<input/>', {
+                      class: "node-input-datavalue",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数值或变量名称"
+                    })
+                    .appendTo(row0)
+
+                  sequenceNameProperty.val(sequence.name);
+                  selectFunctionProperty.val(sequence.datatype);
+                  datavalueProperty.val(sequence.datavalue);
+
+                  selectFunctionProperty.change();
+
+                  row[0].appendChild(fragment);
+
+                },
+                removable: true,
+                sortable: true
+
+              });
+             //开关量栏
+             $('#node-input-Switching-Data-container').css('min-width', '450px').editableList({
+                addItem: function (row, index, data) {
+                  let sequence = data;
+
+                  row.css({
+                    overflow: 'hidden',
+                    whiteSpace: 'nowrap'
+                  });
+
+                  let fragment = document.createDocumentFragment();
+                  let row0 = $('<div/>', {
+                      class: "form-row",
+                    })
+                    .appendTo(fragment);
+                  let sequenceNameProperty = $('<label/>', {
+                      class: "node-input-sequencename",
+                      style: "width:30%;"
+                    })
+                    .appendTo(row0)
+
+                  let selectFunctionProperty = $('<select/>', {
+                      class: "node-input-datatype",
+                      style: "width:30%;",
+                    })
+                    .appendTo(row0);
+
+                  for (var i = 0; i < 2; i++) {
+                    selectFunctionProperty.append($("<option></option>").val(functions[i].v).text(functions[i].t));
+                  }
+
+                  let datavalueProperty = $('<input/>', {
+                      class: "node-input-datavalue",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数值或变量名称"
+                    })
+                    .appendTo(row0)
+
+                  sequenceNameProperty.text(sequence.name);
+                  selectFunctionProperty.val(sequence.datatype);
+                  datavalueProperty.val(sequence.datavalue);
+
+                  selectFunctionProperty.change();
+
+                  row[0].appendChild(fragment);
+
+                },
+                removable: false,
+                sortable: false,
+                addButton: false
+
+              })
+    //告警
+              //告警自定义栏
+            $('#node-input-Alarm-custom-container').css('min-width', '450px').editableList({
+                addItem: function (row, index, data) {
+                  let sequence = data;
+
+                  if (!sequence.hasOwnProperty('name')) {
+                    sequence = {
+                      name: null,
+                      datatype: functions[0].v,
+                      datavalue: null
+                    };
+                  }
+
+                  row.css({
+                    overflow: 'hidden',
+                    whiteSpace: 'nowrap'
+                  });
+
+                  let fragment = document.createDocumentFragment();
+                  let row0 = $('<div/>', {
+                      class: "form-row",
+                    })
+                    .appendTo(fragment);
+                  let sequenceNameProperty = $('<input/>', {
+                      class: "node-input-sequencename",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数据名称"
+                    })
+                    .appendTo(row0)
+
+                  let selectFunctionProperty = $('<select/>', {
+                      class: "node-input-datatype",
+                      style: "width:30%;",
+                    })
+                    .appendTo(row0);
+
+                  for (var i = 0; i < 2; i++) {
+                    selectFunctionProperty.append($("<option></option>").val(functions[i].v).text(functions[i].t));
+                  }
+
+                  let datavalueProperty = $('<input/>', {
+                      class: "node-input-datavalue",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数值或变量名称"
+                    })
+                    .appendTo(row0)
+
+                  sequenceNameProperty.val(sequence.name);
+                  selectFunctionProperty.val(sequence.datatype);
+                  datavalueProperty.val(sequence.datavalue);
+
+                  selectFunctionProperty.change();
+
+                  row[0].appendChild(fragment);
+
+                },
+                removable: true,
+                sortable: true
+
+              });
+             //告警栏
+             $('#node-input-Alarm-Data-container').css('min-width', '450px').editableList({
+                addItem: function (row, index, data) {
+                  let sequence = data;
+
+                  row.css({
+                    overflow: 'hidden',
+                    whiteSpace: 'nowrap'
+                  });
+
+                  let fragment = document.createDocumentFragment();
+                  let row0 = $('<div/>', {
+                      class: "form-row",
+                    })
+                    .appendTo(fragment);
+                  let sequenceNameProperty = $('<label/>', {
+                      class: "node-input-sequencename",
+                      style: "width:30%;"
+                    })
+                    .appendTo(row0)
+
+                  let selectFunctionProperty = $('<select/>', {
+                      class: "node-input-datatype",
+                      style: "width:30%;",
+                    })
+                    .appendTo(row0);
+
+                  for (var i = 0; i < 2; i++) {
+                    selectFunctionProperty.append($("<option></option>").val(functions[i].v).text(functions[i].t));
+                  }
+
+                  let datavalueProperty = $('<input/>', {
+                      class: "node-input-datavalue",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数值或变量名称"
+                    })
+                    .appendTo(row0)
+
+                  sequenceNameProperty.text(sequence.name);
+                  selectFunctionProperty.val(sequence.datatype);
+                  datavalueProperty.val(sequence.datavalue);
+
+                  selectFunctionProperty.change();
+
+                  row[0].appendChild(fragment);
+
+                },
+                removable: false,
+                sortable: false,
+                addButton: false
+
+              })
+    //获取参数定点数
+              //获取参数定点数自定义栏
+            $('#node-input-ParameterFixedPoint-custom-container').css('min-width', '450px').editableList({
+                addItem: function (row, index, data) {
+                  let sequence = data;
+
+                  if (!sequence.hasOwnProperty('name')) {
+                    sequence = {
+                      name: null,
+                      datatype: functions[0].v,
+                      datavalue: null
+                    };
+                  }
+
+                  row.css({
+                    overflow: 'hidden',
+                    whiteSpace: 'nowrap'
+                  });
+
+                  let fragment = document.createDocumentFragment();
+                  let row0 = $('<div/>', {
+                      class: "form-row",
+                    })
+                    .appendTo(fragment);
+                  let sequenceNameProperty = $('<input/>', {
+                      class: "node-input-sequencename",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数据名称"
+                    })
+                    .appendTo(row0)
+
+                  let selectFunctionProperty = $('<select/>', {
+                      class: "node-input-datatype",
+                      style: "width:30%;",
+                    })
+                    .appendTo(row0);
+
+                  for (var i = 0; i < 2; i++) {
+                    selectFunctionProperty.append($("<option></option>").val(functions[i].v).text(functions[i].t));
+                  }
+
+                  let datavalueProperty = $('<input/>', {
+                      class: "node-input-datavalue",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数值或变量名称"
+                    })
+                    .appendTo(row0)
+
+                  sequenceNameProperty.val(sequence.name);
+                  selectFunctionProperty.val(sequence.datatype);
+                  datavalueProperty.val(sequence.datavalue);
+
+                  selectFunctionProperty.change();
+
+                  row[0].appendChild(fragment);
+
+                },
+                removable: true,
+                sortable: true
+
+              });
+             //获取参数定点数栏
+             $('#node-input-ParameterFixedPoint-Data-container').css('min-width', '450px').editableList({
+                addItem: function (row, index, data) {
+                  let sequence = data;
+
+                  row.css({
+                    overflow: 'hidden',
+                    whiteSpace: 'nowrap'
+                  });
+
+                  let fragment = document.createDocumentFragment();
+                  let row0 = $('<div/>', {
+                      class: "form-row",
+                    })
+                    .appendTo(fragment);
+                  let sequenceNameProperty = $('<label/>', {
+                      class: "node-input-sequencename",
+                      style: "width:30%;"
+                    })
+                    .appendTo(row0)
+
+                  let selectFunctionProperty = $('<select/>', {
+                      class: "node-input-datatype",
+                      style: "width:30%;",
+                    })
+                    .appendTo(row0);
+
+                  for (var i = 0; i < 2; i++) {
+                    selectFunctionProperty.append($("<option></option>").val(functions[i].v).text(functions[i].t));
+                  }
+
+                  let datavalueProperty = $('<input/>', {
+                      class: "node-input-datavalue",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数值或变量名称"
+                    })
+                    .appendTo(row0)
+
+                  sequenceNameProperty.text(sequence.name);
+                  selectFunctionProperty.val(sequence.datatype);
+                  datavalueProperty.val(sequence.datavalue);
+
+                  selectFunctionProperty.change();
+
+                  row[0].appendChild(fragment);
+
+                },
+                removable: false,
+                sortable: false,
+                addButton: false
+
+              })
+    //获取参数浮点数
+              //获取参数浮点数自定义栏
+            $('#node-input-ParameterFloatingPoint-custom-container').css('min-width', '450px').editableList({
+                addItem: function (row, index, data) {
+                  let sequence = data;
+
+                  if (!sequence.hasOwnProperty('name')) {
+                    sequence = {
+                      name: null,
+                      datatype: functions[0].v,
+                      datavalue: null
+                    };
+                  }
+
+                  row.css({
+                    overflow: 'hidden',
+                    whiteSpace: 'nowrap'
+                  });
+
+                  let fragment = document.createDocumentFragment();
+                  let row0 = $('<div/>', {
+                      class: "form-row",
+                    })
+                    .appendTo(fragment);
+                  let sequenceNameProperty = $('<input/>', {
+                      class: "node-input-sequencename",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数据名称"
+                    })
+                    .appendTo(row0)
+
+                  let selectFunctionProperty = $('<select/>', {
+                      class: "node-input-datatype",
+                      style: "width:30%;",
+                    })
+                    .appendTo(row0);
+
+                  for (var i = 0; i < 2; i++) {
+                    selectFunctionProperty.append($("<option></option>").val(functions[i].v).text(functions[i].t));
+                  }
+
+                  let datavalueProperty = $('<input/>', {
+                      class: "node-input-datavalue",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数值或变量名称"
+                    })
+                    .appendTo(row0)
+
+                  sequenceNameProperty.val(sequence.name);
+                  selectFunctionProperty.val(sequence.datatype);
+                  datavalueProperty.val(sequence.datavalue);
+
+                  selectFunctionProperty.change();
+
+                  row[0].appendChild(fragment);
+
+                },
+                removable: true,
+                sortable: true
+
+              });
+             //获取参数浮点数栏
+             $('#node-input-ParameterFloatingPoint-Data-container').css('min-width', '450px').editableList({
+                addItem: function (row, index, data) {
+                  let sequence = data;
+
+                  row.css({
+                    overflow: 'hidden',
+                    whiteSpace: 'nowrap'
+                  });
+
+                  let fragment = document.createDocumentFragment();
+                  let row0 = $('<div/>', {
+                      class: "form-row",
+                    })
+                    .appendTo(fragment);
+                  let sequenceNameProperty = $('<label/>', {
+                      class: "node-input-sequencename",
+                      style: "width:30%;"
+                    })
+                    .appendTo(row0)
+
+                  let selectFunctionProperty = $('<select/>', {
+                      class: "node-input-datatype",
+                      style: "width:30%;",
+                    })
+                    .appendTo(row0);
+
+                  for (var i = 0; i < 2; i++) {
+                    selectFunctionProperty.append($("<option></option>").val(functions[i].v).text(functions[i].t));
+                  }
+
+                  let datavalueProperty = $('<input/>', {
+                      class: "node-input-datavalue",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数值或变量名称"
+                    })
+                    .appendTo(row0)
+
+                  sequenceNameProperty.text(sequence.name);
+                  selectFunctionProperty.val(sequence.datatype);
+                  datavalueProperty.val(sequence.datavalue);
+
+                  selectFunctionProperty.change();
+
+                  row[0].appendChild(fragment);
+
+                },
+                removable: false,
+                sortable: false,
+                addButton: false
+
+              })
+    //设置参数浮点数
+              //设置参数浮点数自定义栏
+            $('#node-input-SetParametersFloatingPoint-custom-container').css('min-width', '450px').editableList({
+                addItem: function (row, index, data) {
+                  let sequence = data;
+
+                  if (!sequence.hasOwnProperty('name')) {
+                    sequence = {
+                      name: null,
+                      datatype: functions[0].v,
+                      datavalue: null
+                    };
+                  }
+
+                  row.css({
+                    overflow: 'hidden',
+                    whiteSpace: 'nowrap'
+                  });
+
+                  let fragment = document.createDocumentFragment();
+                  let row0 = $('<div/>', {
+                      class: "form-row",
+                    })
+                    .appendTo(fragment);
+                  let sequenceNameProperty = $('<input/>', {
+                      class: "node-input-sequencename",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数据名称"
+                    })
+                    .appendTo(row0)
+
+                  let selectFunctionProperty = $('<select/>', {
+                      class: "node-input-datatype",
+                      style: "width:30%;",
+                    })
+                    .appendTo(row0);
+
+                  for (var i = 0; i < 2; i++) {
+                    selectFunctionProperty.append($("<option></option>").val(functions[i].v).text(functions[i].t));
+                  }
+
+                  let datavalueProperty = $('<input/>', {
+                      class: "node-input-datavalue",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数值或变量名称"
+                    })
+                    .appendTo(row0)
+
+                  sequenceNameProperty.val(sequence.name);
+                  selectFunctionProperty.val(sequence.datatype);
+                  datavalueProperty.val(sequence.datavalue);
+
+                  selectFunctionProperty.change();
+
+                  row[0].appendChild(fragment);
+
+                },
+                removable: true,
+                sortable: true
+
+              });
+             //设置参数浮点数栏
+             $('#node-input-SetParametersFloatingPoint-Data-container').css('min-width', '450px').editableList({
+                addItem: function (row, index, data) {
+                  let sequence = data;
+
+                  row.css({
+                    overflow: 'hidden',
+                    whiteSpace: 'nowrap'
+                  });
+
+                  let fragment = document.createDocumentFragment();
+                  let row0 = $('<div/>', {
+                      class: "form-row",
+                    })
+                    .appendTo(fragment);
+                  let sequenceNameProperty = $('<label/>', {
+                      class: "node-input-sequencename",
+                      style: "width:30%;"
+                    })
+                    .appendTo(row0)
+
+                  let selectFunctionProperty = $('<select/>', {
+                      class: "node-input-datatype",
+                      style: "width:30%;",
+                    })
+                    .appendTo(row0);
+
+                  for (var i = 0; i < 2; i++) {
+                    selectFunctionProperty.append($("<option></option>").val(functions[i].v).text(functions[i].t));
+                  }
+
+                  let datavalueProperty = $('<input/>', {
+                      class: "node-input-datavalue",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数值或变量名称"
+                    })
+                    .appendTo(row0)
+
+                  sequenceNameProperty.text(sequence.name);
+                  selectFunctionProperty.val(sequence.datatype);
+                  datavalueProperty.val(sequence.datavalue);
+
+                  selectFunctionProperty.change();
+
+                  row[0].appendChild(fragment);
+
+                },
+                removable: false,
+                sortable: false,
+                addButton: false
+
+              })
+    //设置参数定点数
+              //设置参数定点数自定义栏
+            $('#node-input-SetParametersFixedPoint-custom-container').css('min-width', '450px').editableList({
+                addItem: function (row, index, data) {
+                  let sequence = data;
+
+                  if (!sequence.hasOwnProperty('name')) {
+                    sequence = {
+                      name: null,
+                      datatype: functions[0].v,
+                      datavalue: null
+                    };
+                  }
+
+                  row.css({
+                    overflow: 'hidden',
+                    whiteSpace: 'nowrap'
+                  });
+
+                  let fragment = document.createDocumentFragment();
+                  let row0 = $('<div/>', {
+                      class: "form-row",
+                    })
+                    .appendTo(fragment);
+                  let sequenceNameProperty = $('<input/>', {
+                      class: "node-input-sequencename",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数据名称"
+                    })
+                    .appendTo(row0)
+
+                  let selectFunctionProperty = $('<select/>', {
+                      class: "node-input-datatype",
+                      style: "width:30%;",
+                    })
+                    .appendTo(row0);
+
+                  for (var i = 0; i < 2; i++) {
+                    selectFunctionProperty.append($("<option></option>").val(functions[i].v).text(functions[i].t));
+                  }
+
+                  let datavalueProperty = $('<input/>', {
+                      class: "node-input-datavalue",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数值或变量名称"
+                    })
+                    .appendTo(row0)
+
+                  sequenceNameProperty.val(sequence.name);
+                  selectFunctionProperty.val(sequence.datatype);
+                  datavalueProperty.val(sequence.datavalue);
+
+                  selectFunctionProperty.change();
+
+                  row[0].appendChild(fragment);
+
+                },
+                removable: true,
+                sortable: true
+
+              });
+             //设置参数定点数栏
+             $('#node-input-SetParametersFixedPoint-Data-container').css('min-width', '450px').editableList({
+                addItem: function (row, index, data) {
+                  let sequence = data;
+
+                  row.css({
+                    overflow: 'hidden',
+                    whiteSpace: 'nowrap'
+                  });
+
+                  let fragment = document.createDocumentFragment();
+                  let row0 = $('<div/>', {
+                      class: "form-row",
+                    })
+                    .appendTo(fragment);
+                  let sequenceNameProperty = $('<label/>', {
+                      class: "node-input-sequencename",
+                      style: "width:30%;"
+                    })
+                    .appendTo(row0)
+
+                  let selectFunctionProperty = $('<select/>', {
+                      class: "node-input-datatype",
+                      style: "width:30%;",
+                    })
+                    .appendTo(row0);
+
+                  for (var i = 0; i < 2; i++) {
+                    selectFunctionProperty.append($("<option></option>").val(functions[i].v).text(functions[i].t));
+                  }
+
+                  let datavalueProperty = $('<input/>', {
+                      class: "node-input-datavalue",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数值或变量名称"
+                    })
+                    .appendTo(row0)
+
+                  sequenceNameProperty.text(sequence.name);
+                  selectFunctionProperty.val(sequence.datatype);
+                  datavalueProperty.val(sequence.datavalue);
+
+                  selectFunctionProperty.change();
+
+                  row[0].appendChild(fragment);
+
+                },
+                removable: false,
+                sortable: false,
+                addButton: false
+
+              })
+    //用户自定义数
+              //用户自定义数自定义栏
+            $('#node-input-User-custom-container').css('min-width', '450px').editableList({
+                addItem: function (row, index, data) {
+                  let sequence = data;
+
+                  if (!sequence.hasOwnProperty('name')) {
+                    sequence = {
+                      name: null,
+                      datatype: functions[0].v,
+                      datavalue: null
+                    };
+                  }
+
+                  row.css({
+                    overflow: 'hidden',
+                    whiteSpace: 'nowrap'
+                  });
+
+                  let fragment = document.createDocumentFragment();
+                  let row0 = $('<div/>', {
+                      class: "form-row",
+                    })
+                    .appendTo(fragment);
+                  let sequenceNameProperty = $('<input/>', {
+                      class: "node-input-sequencename",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数据名称"
+                    })
+                    .appendTo(row0)
+
+                  let selectFunctionProperty = $('<select/>', {
+                      class: "node-input-datatype",
+                      style: "width:30%;",
+                    })
+                    .appendTo(row0);
+
+                  for (var i = 0; i < 2; i++) {
+                    selectFunctionProperty.append($("<option></option>").val(functions[i].v).text(functions[i].t));
+                  }
+
+                  let datavalueProperty = $('<input/>', {
+                      class: "node-input-datavalue",
+                      type: "text",
+                      style: "width:30%;",
+                      placeholder: "数值或变量名称"
+                    })
+                    .appendTo(row0)
+
+                  sequenceNameProperty.val(sequence.name);
+                  selectFunctionProperty.val(sequence.datatype);
+                  datavalueProperty.val(sequence.datavalue);
+
+                  selectFunctionProperty.change();
+
+                  row[0].appendChild(fragment);
+
+                },
+                removable: true,
+                sortable: true
+
+              });
+/*_____________________________________________________________________________________________________________________________*/
+    //模拟量定点数
+            //根据当前设置的设备类型重新添加数据
+            if (this.AnalogQuantityFixedPoint_Data.length <=1) {
+                let sequenceMsg = AnalogQuantityFixedPoint_Data_Group[this.LowerMachineType];
+                this.AnalogQuantityFixedPoint_Data = sequenceMsg;
+            }
+            $('#node-input-AnalogQuantityFixedPoint-Data-container').editableList('empty');
+            for (var i = 0; i < this.AnalogQuantityFixedPoint_Data.length; i++) {
+                
+                $("#node-input-AnalogQuantityFixedPoint-Data-container").editableList('addItem', this.AnalogQuantityFixedPoint_Data[i]);
+            }
+            //清空模拟量定点数自定义栏
+            
+            //根据当前设置的设备类型重新添加自定义数据
+            if (this.AnalogQuantityFixedPoint_custom.length == 0 && this.AnalogQuantityFixedPoint_Custom_num > 0) {
+                this.AnalogQuantityFixedPoint_custom = [];
+                let sequenceMsg_custom = {
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                };
+                this.AnalogQuantityFixedPoint_custom.push(sequenceMsg_custom);
+            }
+            $('#node-input-AnalogQuantityFixedPoint-custom-container').editableList('empty');
+            for (var i = 0; i < this.AnalogQuantityFixedPoint_custom.length; i++) {
+                    $("#node-input-AnalogQuantityFixedPoint-custom-container").editableList('addItem', this.AnalogQuantityFixedPoint_custom[i]);
+            }
+    //模拟量浮点数
+            //根据当前设置的设备类型重新添加数据
+            if (this.AnalogFloatingPoint_Data.length <= 1) {
+                let AnalogFloatingPoint_sequenceMsg = AnalogFloatingPoint_Data_Group[this.LowerMachineType];
+                this.AnalogFloatingPoint_Data = AnalogFloatingPoint_sequenceMsg;
+            }
+            $('#node-input-AnalogFloatingPoint-Data-container').editableList('empty');
+            for (var i = 0; i < this.AnalogFloatingPoint_Data.length; i++) {
+
+                $("#node-input-AnalogFloatingPoint-Data-container").editableList('addItem', this.AnalogFloatingPoint_Data[i]);
+            }
+            //清空模拟量浮点数自定义栏
+            //根据当前设置的设备类型重新添加自定义数据
+            if (this.AnalogFloatingPoint_custom.length == 0 && this.AnalogFloatingPoint_Custom_num > 0) {
+                let AnalogFloatingPoint_sequenceMsg_custom = {
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                };
+                this.AnalogFloatingPoint_custom = [AnalogFloatingPoint_sequenceMsg_custom];
+            }
+            $('#node-input-AnalogFloatingPoint-custom-container').editableList('empty');
+            for (var i = 0; i < this.AnalogFloatingPoint_custom.length; i++) {
+                $("#node-input-AnalogFloatingPoint-custom-container").editableList('addItem', this.AnalogFloatingPoint_custom[i]);
+            }
+    //开关量
+            //根据当前设置的设备类型重新添加数据
+            if (this.Switching_Data.length <= 1) {
+                let Switching_sequenceMsg = Switching_Data_Group[this.LowerMachineType];
+                this.Switching_Data = Switching_sequenceMsg;
+            }
+            $('#node-input-Switching-Data-container').editableList('empty');
+            for (var i = 0; i < this.Switching_Data.length; i++) {
+
+                $("#node-input-Switching-Data-container").editableList('addItem', this.Switching_Data[i]);
+            }
+            //清空开关量自定义栏
+            //根据当前设置的设备类型重新添加自定义数据
+            if (this.Switching_custom.length == 0 && this.Switching_Custom_num > 0) {
+                let Switching_sequenceMsg_custom = {
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                };
+                this.Switching_custom = [Switching_sequenceMsg_custom];
+            }
+            $('#node-input-Switching-custom-container').editableList('empty');
+            for (var i = 0; i < this.Switching_custom.length; i++) {
+                $("#node-input-Switching-custom-container").editableList('addItem', this.Switching_custom[i]);
+            }
+    //告警
+            //根据当前设置的设备类型重新添加数据
+            if (this.Alarm_Data.length <= 1) {
+                let Alarm_sequenceMsg = Alarm_Data_Group[this.LowerMachineType];
+                this.Alarm_Data = Alarm_sequenceMsg;
+            }
+            $('#node-input-Alarm-Data-container').editableList('empty');
+            for (var i = 0; i < this.Alarm_Data.length; i++) {
+
+                $("#node-input-Alarm-Data-container").editableList('addItem', this.Alarm_Data[i]);
+            }
+            //清空告警自定义栏
+            //根据当前设置的设备类型重新添加自定义数据
+            if (this.Alarm_custom.length == 0 && this.Alarm_Custom_num > 0) {
+                let Alarm_sequenceMsg_custom = {
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                };
+                this.Alarm_custom = [Alarm_sequenceMsg_custom];
+            }
+            $('#node-input-Alarm-custom-container').editableList('empty');
+            for (var i = 0; i < this.Alarm_custom.length; i++) {
+                $("#node-input-Alarm-custom-container").editableList('addItem', this.Alarm_custom[i]);
+            }
+    //获取参数定点数
+            //根据当前设置的设备类型重新添加数据
+            if (this.ParameterFixedPoint_Data.length <= 1) {
+                let ParameterFixedPoint_sequenceMsg = ParameterFixedPoint_Data_Group[this.LowerMachineType];
+                this.ParameterFixedPoint_Data = ParameterFixedPoint_sequenceMsg;
+            }
+            $('#node-input-ParameterFixedPoint-Data-container').editableList('empty');
+            for (var i = 0; i < this.ParameterFixedPoint_Data.length; i++) {
+
+                $("#node-input-ParameterFixedPoint-Data-container").editableList('addItem', this.ParameterFixedPoint_Data[i]);
+            }
+            //清空参数定点数自定义栏
+            //根据当前设置的设备类型重新添加自定义数据
+            if (this.ParameterFixedPoint_custom.length == 0 && this.ParameterFixedPoint_Custom_num > 0) {
+                let ParameterFixedPoint_sequenceMsg_custom = {
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                };
+                this.ParameterFixedPoint_custom = [ParameterFixedPoint_sequenceMsg_custom];
+            }
+            $('#node-input-ParameterFixedPoint-custom-container').editableList('empty');
+            for (var i = 0; i < this.ParameterFixedPoint_custom.length; i++) {
+                $("#node-input-ParameterFixedPoint-custom-container").editableList('addItem', this.ParameterFixedPoint_custom[i]);
+            }
+    //获取参数浮点数
+            //根据当前设置的设备类型重新添加数据
+            if (this.ParameterFloatingPoint_Data.length <= 1) {
+                let ParameterFloatingPoint_sequenceMsg = ParameterFloatingPoint_Data_Group[this.LowerMachineType];
+                this.ParameterFloatingPoint_Data = ParameterFloatingPoint_sequenceMsg;
+            }
+            $('#node-input-ParameterFloatingPoint-Data-container').editableList('empty');
+            for (var i = 0; i < this.ParameterFloatingPoint_Data.length; i++) {
+
+                $("#node-input-ParameterFloatingPoint-Data-container").editableList('addItem', this.ParameterFloatingPoint_Data[i]);
+            }
+            //清空参数浮点数自定义栏
+            //根据当前设置的设备类型重新添加自定义数据
+            if (this.ParameterFloatingPoint_custom.length == 0 && this.ParameterFloatingPoint_Custom_num > 0) {
+                let ParameterFloatingPoint_sequenceMsg_custom = {
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                };
+                this.ParameterFloatingPoint_custom = [ParameterFloatingPoint_sequenceMsg_custom];
+            }
+            $('#node-input-ParameterFloatingPoint-custom-container').editableList('empty');
+            for (var i = 0; i < this.ParameterFloatingPoint_custom.length; i++) {
+                $("#node-input-ParameterFloatingPoint-custom-container").editableList('addItem', this.ParameterFloatingPoint_custom[i]);
+            }
+    //设置参数浮点数
+            //根据当前设置的设备类型重新添加数据
+            if (this.SetParametersFloatingPoint_Data.length <= 1) {
+                let SetParametersFloatingPoint_sequenceMsg = SetParametersFloatingPoint_Data_Group[this.LowerMachineType];
+                this.SetParametersFloatingPoint_Data = SetParametersFloatingPoint_sequenceMsg;
+            }
+            $('#node-input-SetParametersFloatingPoint-Data-container').editableList('empty');
+            for (var i = 0; i < this.SetParametersFloatingPoint_Data.length; i++) {
+
+                $("#node-input-SetParametersFloatingPoint-Data-container").editableList('addItem', this.SetParametersFloatingPoint_Data[i]);
+            }
+            //清空设置参数浮点数自定义栏
+            //根据当前设置的设备类型重新添加自定义数据
+            if (this.SetParametersFloatingPoint_custom.length == 0 && this.SetParametersFloatingPoint_Custom_num > 0) {
+                let SetParametersFloatingPoint_sequenceMsg_custom = {
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                };
+                this.SetParametersFloatingPoint_custom = [SetParametersFloatingPoint_sequenceMsg_custom];
+            }
+            $('#node-input-SetParametersFloatingPoint-custom-container').editableList('empty');
+            for (var i = 0; i < this.SetParametersFloatingPoint_custom.length; i++) {
+                $("#node-input-SetParametersFloatingPoint-custom-container").editableList('addItem', this.SetParametersFloatingPoint_custom[i]);
+            }
+    //设置参数定点数
+            //根据当前设置的设备类型重新添加数据
+            if (this.SetParametersFixedPoint_Data.length <= 1) {
+                let SetParametersFixedPoint_sequenceMsg = SetParametersFixedPoint_Data_Group[this.LowerMachineType];
+                this.SetParametersFixedPoint_Data = SetParametersFixedPoint_sequenceMsg;
+            }
+            $('#node-input-SetParametersFixedPoint-Data-container').editableList('empty');
+            for (var i = 0; i < this.SetParametersFixedPoint_Data.length; i++) {
+
+                $("#node-input-SetParametersFixedPoint-Data-container").editableList('addItem', this.SetParametersFixedPoint_Data[i]);
+            }
+            //清空设置参数定点数自定义栏
+            //根据当前设置的设备类型重新添加自定义数据
+            if (this.SetParametersFixedPoint_custom.length == 0 && this.SetParametersFixedPoint_Custom_num > 0) {
+                let SetParametersFixedPoint_sequenceMsg_custom = {
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                };
+                this.SetParametersFixedPoint_custom = [SetParametersFixedPoint_sequenceMsg_custom];
+            }
+            $('#node-input-SetParametersFixedPoint-custom-container').editableList('empty');
+            for (var i = 0; i < this.SetParametersFixedPoint_custom.length; i++) {
+                $("#node-input-SetParametersFixedPoint-custom-container").editableList('addItem', this.SetParametersFixedPoint_custom[i]);
+            }
+    //用户自定义数
+            //清空用户自定义数自定义栏
+            //根据当前设置的设备类型重新添加自定义数据
+            if (this.User_custom.length == 0 && this.User_Custom_num > 0) {
+                let User_sequenceMsg_custom = {
+                  name: null,
+                  datatype: functions[0].v,
+                  datavalue: null
+                };
+                this.User_custom = [User_sequenceMsg_custom];
+            }
+            $('#node-input-User-custom-container').editableList('empty');
+            for (var i = 0; i < this.User_custom.length; i++) {
+                $("#node-input-User-custom-container").editableList('addItem', this.User_custom[i]);
+            }
+        },
+        oneditsave: function () {
+    //模拟量定点数保存
+          //预设数据
+          let sequences_data = $("#node-input-AnalogQuantityFixedPoint-Data-container").editableList('items');
+          let node = this;
+          node.AnalogQuantityFixedPoint_Data = [];
+          sequences_data.each(function (i) {
+            let sequence_data = $(this);
+            let r = {
+              name: sequence_data.find(".node-input-sequencename").text(),
+              datatype: sequence_data.find(".node-input-datatype").val(),
+              datavalue: sequence_data.find(".node-input-datavalue").val()
+            };
+            node.AnalogQuantityFixedPoint_Data.push(r);
+          });
+          //alert("保存数据"+node.AnalogQuantityFixedPoint_Data[0].datavalue)
+          //自定义数据
+          let sequences = $("#node-input-AnalogQuantityFixedPoint-custom-container").editableList('items');
+
+          node.AnalogQuantityFixedPoint_custom = [];
+          sequences.each(function (i) {
+            let sequence = $(this);
+            let r = {
+              name: sequence.find(".node-input-sequencename").val(),
+              datatype: sequence.find(".node-input-datatype").val(),
+              datavalue: sequence.find(".node-input-datavalue").val()
+            };
+            node.AnalogQuantityFixedPoint_custom.push(r);
+          });
+    //模拟量浮点数保存
+          //预设数据
+          let AnalogFloatingPoint_sequences_data = $("#node-input-AnalogFloatingPoint-Data-container").editableList('items');
+          node.AnalogFloatingPoint_Data = [];
+          AnalogFloatingPoint_sequences_data.each(function (i) {
+            let sequence_data = $(this);
+            let r = {
+              name: sequence_data.find(".node-input-sequencename").text(),
+              datatype: sequence_data.find(".node-input-datatype").val(),
+              datavalue: sequence_data.find(".node-input-datavalue").val()
+            };
+            node.AnalogFloatingPoint_Data.push(r);
+          });
+          //自定义数据
+          let AnalogFloatingPoint_sequences = $("#node-input-AnalogFloatingPoint-custom-container").editableList('items');
+
+          node.AnalogFloatingPoint_custom = [];
+          AnalogFloatingPoint_sequences.each(function (i) {
+            let sequence = $(this);
+            let r = {
+              name: sequence.find(".node-input-sequencename").val(),
+              datatype: sequence.find(".node-input-datatype").val(),
+              datavalue: sequence.find(".node-input-datavalue").val()
+            };
+            node.AnalogFloatingPoint_custom.push(r);
+          });
+    //开关量保存
+          //预设数据
+          let Switching_sequences_data = $("#node-input-Switching-Data-container").editableList('items');
+          node.Switching_Data = [];
+          Switching_sequences_data.each(function (i) {
+            let sequence_data = $(this);
+            let r = {
+              name: sequence_data.find(".node-input-sequencename").text(),
+              datatype: sequence_data.find(".node-input-datatype").val(),
+              datavalue: sequence_data.find(".node-input-datavalue").val()
+            };
+            node.Switching_Data.push(r);
+          });
+          //自定义数据
+          let Switching_sequences = $("#node-input-Switching-custom-container").editableList('items');
+
+          node.Switching_custom = [];
+          Switching_sequences.each(function (i) {
+            let sequence = $(this);
+            let r = {
+              name: sequence.find(".node-input-sequencename").val(),
+              datatype: sequence.find(".node-input-datatype").val(),
+              datavalue: sequence.find(".node-input-datavalue").val()
+            };
+            node.Switching_custom.push(r);
+          });
+    //告警保存
+          //预设数据
+          let Alarm_sequences_data = $("#node-input-Alarm-Data-container").editableList('items');
+          node.Alarm_Data = [];
+          Alarm_sequences_data.each(function (i) {
+            let sequence_data = $(this);
+            let r = {
+              name: sequence_data.find(".node-input-sequencename").text(),
+              datatype: sequence_data.find(".node-input-datatype").val(),
+              datavalue: sequence_data.find(".node-input-datavalue").val()
+            };
+            node.Alarm_Data.push(r);
+          });
+          //自定义数据
+          let Alarm_sequences = $("#node-input-Alarm-custom-container").editableList('items');
+
+          node.Alarm_custom = [];
+          Alarm_sequences.each(function (i) {
+            let sequence = $(this);
+            let r = {
+              name: sequence.find(".node-input-sequencename").val(),
+              datatype: sequence.find(".node-input-datatype").val(),
+              datavalue: sequence.find(".node-input-datavalue").val()
+            };
+            node.Alarm_custom.push(r);
+          });
+    //获取参数定点数保存
+          //预设数据
+          let ParameterFixedPoint_sequences_data = $("#node-input-ParameterFixedPoint-Data-container").editableList('items');
+          node.ParameterFixedPoint_Data = [];
+          ParameterFixedPoint_sequences_data.each(function (i) {
+            let sequence_data = $(this);
+            let r = {
+              name: sequence_data.find(".node-input-sequencename").text(),
+              datatype: sequence_data.find(".node-input-datatype").val(),
+              datavalue: sequence_data.find(".node-input-datavalue").val()
+            };
+            node.ParameterFixedPoint_Data.push(r);
+          });
+          //自定义数据
+          let ParameterFixedPoint_sequences = $("#node-input-ParameterFixedPoint-custom-container").editableList('items');
+
+          node.ParameterFixedPoint_custom = [];
+          ParameterFixedPoint_sequences.each(function (i) {
+            let sequence = $(this);
+            let r = {
+              name: sequence.find(".node-input-sequencename").val(),
+              datatype: sequence.find(".node-input-datatype").val(),
+              datavalue: sequence.find(".node-input-datavalue").val()
+            };
+            node.ParameterFixedPoint_custom.push(r);
+          });
+    //获取参数浮点数保存
+          //预设数据
+          let ParameterFloatingPoint_sequences_data = $("#node-input-ParameterFloatingPoint-Data-container").editableList('items');
+          node.ParameterFloatingPoint_Data = [];
+          ParameterFloatingPoint_sequences_data.each(function (i) {
+            let sequence_data = $(this);
+            let r = {
+              name: sequence_data.find(".node-input-sequencename").text(),
+              datatype: sequence_data.find(".node-input-datatype").val(),
+              datavalue: sequence_data.find(".node-input-datavalue").val()
+            };
+            node.ParameterFloatingPoint_Data.push(r);
+          });
+          //自定义数据
+          let ParameterFloatingPoint_sequences = $("#node-input-ParameterFloatingPoint-custom-container").editableList('items');
+
+          node.ParameterFloatingPoint_custom = [];
+          ParameterFloatingPoint_sequences.each(function (i) {
+            let sequence = $(this);
+            let r = {
+              name: sequence.find(".node-input-sequencename").val(),
+              datatype: sequence.find(".node-input-datatype").val(),
+              datavalue: sequence.find(".node-input-datavalue").val()
+            };
+            node.ParameterFloatingPoint_custom.push(r);
+          });
+    //设置参数浮点数保存
+          //预设数据
+          let SetParametersFloatingPoint_sequences_data = $("#node-input-SetParametersFloatingPoint-Data-container").editableList('items');
+          node.SetParametersFloatingPoint_Data = [];
+          SetParametersFloatingPoint_sequences_data.each(function (i) {
+            let sequence_data = $(this);
+            let r = {
+              name: sequence_data.find(".node-input-sequencename").text(),
+              datatype: sequence_data.find(".node-input-datatype").val(),
+              datavalue: sequence_data.find(".node-input-datavalue").val()
+            };
+            node.SetParametersFloatingPoint_Data.push(r);
+          });
+          //自定义数据
+          let SetParametersFloatingPoint_sequences = $("#node-input-SetParametersFloatingPoint-custom-container").editableList('items');
+
+          node.SetParametersFloatingPoint_custom = [];
+          SetParametersFloatingPoint_sequences.each(function (i) {
+            let sequence = $(this);
+            let r = {
+              name: sequence.find(".node-input-sequencename").val(),
+              datatype: sequence.find(".node-input-datatype").val(),
+              datavalue: sequence.find(".node-input-datavalue").val()
+            };
+            node.SetParametersFloatingPoint_custom.push(r);
+          });
+    //设置参数定点数保存
+          //预设数据
+          let SetParametersFixedPoint_sequences_data = $("#node-input-SetParametersFixedPoint-Data-container").editableList('items');
+          node.SetParametersFixedPoint_Data = [];
+          SetParametersFixedPoint_sequences_data.each(function (i) {
+            let sequence_data = $(this);
+            let r = {
+              name: sequence_data.find(".node-input-sequencename").text(),
+              datatype: sequence_data.find(".node-input-datatype").val(),
+              datavalue: sequence_data.find(".node-input-datavalue").val()
+            };
+            node.SetParametersFixedPoint_Data.push(r);
+          });
+          //自定义数据
+          let SetParametersFixedPoint_sequences = $("#node-input-SetParametersFixedPoint-custom-container").editableList('items');
+
+          node.SetParametersFixedPoint_custom = [];
+          SetParametersFixedPoint_sequences.each(function (i) {
+            let sequence = $(this);
+            let r = {
+              name: sequence.find(".node-input-sequencename").val(),
+              datatype: sequence.find(".node-input-datatype").val(),
+              datavalue: sequence.find(".node-input-datavalue").val()
+            };
+            node.SetParametersFixedPoint_custom.push(r);
+          });
+    //用户自定义数保存
+          //自定义数据
+          let User_sequences = $("#node-input-User-custom-container").editableList('items');
+
+          node.User_custom = [];
+          User_sequences.each(function (i) {
+            let sequence = $(this);
+            let r = {
+              name: sequence.find(".node-input-sequencename").val(),
+              datatype: sequence.find(".node-input-datatype").val(),
+              datavalue: sequence.find(".node-input-datavalue").val()
+            };
+            node.User_custom.push(r);
+          });
+        },
+        oneditresize: function (size) {
+          var height = size.height;
+          //$('#node-input-AnalogQuantityFixedPoint-custom-container').css("height", (height - 145) + "px");
+          //$('#node-input-AnalogFloatingPoint-custom-container').css("height", (height - 145) + "px");
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="ydt-Lower-machine">
+    <div class="form-row">
+        <ul style="background: #fff; min-width: 600px; margin-bottom: 20px;" id="node-input-ydt-tabs"></ul>
+    </div>
+    <div id="node-input-tabs-content" style="min-height: 170px;">
+        <!-- 设备设置tab -->
+        <div id="lower-machine-settings-tab" style="display:none">
+            <div class="form-row">
+                <label style="min-width:180px" for="node-input-name"><i class="fa fa-address-card"></i>    Name</label>
+                <input style="max-width:250px" type="text" id="node-input-name" placeholder="Name">
+            </div>
+            <div class="form-row">
+                <label style="min-width:180px" for="node-input-LowerMachineType"><i class="fa fa-tag"></i>    设备类型</label>
+                <input style="max-width:250px" type="text" id="node-input-LowerMachineType" placeholder="LowerMachineType">
+            </div>
+            <div class="form-row">
+                <label style="min-width:180px" for="node-input-Version"><i class="fa fa-exclamation-circle"></i>    版本号</label>
+                <input style="max-width:250px" type="text" id="node-input-Version" placeholder="Version">
+            </div>
+            <div class="form-row">
+                <label style="min-width:180px" for="node-input-DeviceAddress"><i class="fa fa-sticky-note"></i>    设备地址</label>
+                <input style="max-width:250px" type="text" id="node-input-DeviceAddress" placeholder="DeviceAddress">
+            </div>
+            <div class="form-row">
+                <label style="min-width:180px" for="node-input-switch_status"><i class="fa fa-toggle-on"></i>    开关量变化标志</label>
+                <input style="max-width:250px" type="text" id="node-input-switch_status">
+            </div>
+            <div class="form-row">
+                <label style="min-width:180px" for="node-input-alarm_status"><i class="fa fa-warning"></i>    告警</label>
+                <input style="max-width:250px" type="text" id="node-input-alarm_status">
+            </div>
+            <div class="form-row">
+                <label style="min-width:180px" for="node-input-RemoteControl"><i class="fa fa-wrench"></i>    遥控</label>
+                <input style="max-width:250px" type="text" id="node-input-RemoteControl">
+            </div>
+            <div class="form-row">
+                <label style="min-width:180px" for="node-input-DatetimeGroup"><i class="fa fa-table"></i>    时间</label>
+                <input style="max-width:250px" type="text" id="node-input-DatetimeGroup">
+            </div>
+            <div class="form-row">
+                <label style="min-width:180px" for="node-input-ManufacturerInformation"><i class="fa fa-th"></i>    厂家信息</label>
+                <input style="max-width:250px" type="text" id="node-input-ManufacturerInformation">
+            </div>
+            <div class="form-row">
+                <label style="min-width:180px" for="node-input-ManufacturerEdition"><i class="fa fa-th"></i>    厂家软件版本</label>
+                <input style="max-width:250px" type="text" id="node-input-ManufacturerEdition">
+            </div>
+            <div class="form-row">
+                <label style="min-width:180px" for="node-input-ManufacturerDevice"><i class="fa fa-th"></i>    厂家采集器名称</label>
+                <input style="max-width:250px" type="text" id="node-input-ManufacturerDevice">
+            </div>
+        </div>
+        <!-- 设备参数设置tab -->
+        <div id="data-options-tab" style="display:none">
+        <!-- 模拟量定点数 -->
+            <div aria-label="Show template selection, collapsible" class="form-row">
+                <b id="show-quantity-fixed-props" title="">
+                    <i class="fa fa-caret-right"></i> 模拟量定点数
+                </b>
+                <div id="analog-quantity-fixed-point" aria-label="Hideable Template Settings Section" style="display:hidden;border:1px solid silver;padding:.5em;">
+                    <div class="form-row">
+                        <label style="min-width:180px" for="node-input-AnalogQuantityFixedPoint_Custom_num"><i class="fa fa-th"></i> <span>用户自定义遥测内容数量</span></label>
+                        <input type="number" id="node-input-AnalogQuantityFixedPoint_Custom_num" style="max-width:80px">
+                    </div>
+                    <!-- Package List -->
+                    <label style="min-width:180px" ><i class="fa fa-th"></i> <span>遥测数据</span></label>
+                    <div class="form-row node-input-AnalogQuantityFixedPoint-Data-container-row">
+                        <ol id="node-input-AnalogQuantityFixedPoint-Data-container" style="text-align:center" ></ol>
+                    </div>
+                    <!-- Package List -->
+                    <label style="min-width:180px" ><i class="fa fa-th"></i> <span>用户自定义遥测内容</span></label>
+                    <div class="form-row node-input-AnalogQuantityFixedPoint-custom-container-row">
+                        <div class="form-row" style="width: 100%">
+                            <label style="width:30%;text-align:center"><span>名称</span></label>
+                            <label style="width:30%;text-align:center"><span>类型</span></label>
+                            <label style="width:30%;text-align:center"><span>值</span></label>
+                        </div>
+                        <ol id="node-input-AnalogQuantityFixedPoint-custom-container" style="text-align:center" ></ol>
+                    </div>
+                </div>
+            </div>
+        <!-- 模拟量浮点数 -->
+            <div aria-label="Show template selection, collapsible" class="form-row">
+                <b id="show-floating-props" title="">
+                    <i class="fa fa-caret-right"></i> 模拟量浮点数
+                </b>
+                <div id="analog-floating-point" aria-label="Hideable Template Settings Section" style="display:hidden;border:1px solid silver;padding:.5em;">
+                    <div class="form-row">
+                        <label style="min-width:180px" for="node-input-AnalogFloatingPoint_Custom_num"><i class="fa fa-th"></i> <span>用户自定义遥测内容数量</span></label>
+                        <input type="number" id="node-input-AnalogFloatingPoint_Custom_num" style="max-width:80px">
+                    </div>
+                    <!-- Package List -->
+                    <label style="min-width:180px" ><i class="fa fa-th"></i> <span>遥测数据</span></label>
+                    <div class="form-row node-input-AnalogFloatingPoint-Data-container-row">
+                        <ol id="node-input-AnalogFloatingPoint-Data-container" style="text-align:center" ></ol>
+                    </div>
+                    <!-- Package List -->
+                    <label style="min-width:180px" ><i class="fa fa-th"></i> <span>用户自定义遥测内容</span></label>
+                    <div class="form-row node-input-AnalogFloatingPoint-custom-container-row">
+                        <div class="form-row" style="width: 100%">
+                            <label style="width:30%;text-align:center"><span>名称</span></label>
+                            <label style="width:30%;text-align:center"><span>类型</span></label>
+                            <label style="width:30%;text-align:center"><span>值</span></label>
+                        </div>
+                        <ol id="node-input-AnalogFloatingPoint-custom-container" style="text-align:center" ></ol>
+                    </div>
+                </div>
+            </div>
+        <!-- 开关量状态 -->
+            <div aria-label="Show template selection, collapsible" class="form-row">
+                <b id="show-Switching-props" title="">
+                    <i class="fa fa-caret-right"></i> 开关量状态
+                </b>
+                <div id="analog-Switching" aria-label="Hideable Template Settings Section" style="display:hidden;border:1px solid silver;padding:.5em;">
+                    <div class="form-row">
+                        <label style="min-width:180px" for="node-input-Switching_Custom_num"><i class="fa fa-th"></i> <span>用户自定义遥测内容数量</span></label>
+                        <input type="number" id="node-input-Switching_Custom_num" style="max-width:80px">
+                    </div>
+                    <!-- Package List -->
+                    <label style="min-width:180px" ><i class="fa fa-th"></i> <span>遥测数据</span></label>
+                    <div class="form-row node-input-Switching-Data-container-row">
+                        <ol id="node-input-Switching-Data-container" style="text-align:center" ></ol>
+                    </div>
+                    <!-- Package List -->
+                    <label style="min-width:180px" ><i class="fa fa-th"></i> <span>用户自定义遥测内容</span></label>
+                    <div class="form-row node-input-Switching-custom-container-row">
+                        <div class="form-row" style="width: 100%">
+                            <label style="width:30%;text-align:center"><span>名称</span></label>
+                            <label style="width:30%;text-align:center"><span>类型</span></label>
+                            <label style="width:30%;text-align:center"><span>值</span></label>
+                        </div>
+                        <ol id="node-input-Switching-custom-container" style="text-align:center" ></ol>
+                    </div>
+                </div>
+            </div>
+        <!-- 告警 -->
+            <div aria-label="Show template selection, collapsible" class="form-row">
+                <b id="show-Alarm-props" title="">
+                    <i class="fa fa-caret-right"></i> 告警
+                </b>
+                <div id="analog-Alarm" aria-label="Hideable Template Settings Section" style="display:hidden;border:1px solid silver;padding:.5em;">
+                    <div class="form-row">
+                        <label style="min-width:180px" for="node-input-Alarm_Custom_num"><i class="fa fa-th"></i> <span>用户自定义告警内容数量</span></label>
+                        <input type="number" id="node-input-Alarm_Custom_num" style="max-width:80px">
+                    </div>
+                    <!-- Package List -->
+                    <label style="min-width:180px" ><i class="fa fa-th"></i> <span>告警数据</span></label>
+                    <div class="form-row node-input-Alarm-Data-container-row">
+                        <ol id="node-input-Alarm-Data-container" style="text-align:center" ></ol>
+                    </div>
+                    <!-- Package List -->
+                    <label style="min-width:180px" ><i class="fa fa-th"></i> <span>用户自定义告警内容</span></label>
+                    <div class="form-row node-input-Alarm-custom-container-row">
+                        <div class="form-row" style="width: 100%">
+                            <label style="width:30%;text-align:center"><span>名称</span></label>
+                            <label style="width:30%;text-align:center"><span>类型</span></label>
+                            <label style="width:30%;text-align:center"><span>值</span></label>
+                        </div>
+                        <ol id="node-input-Alarm-custom-container" style="text-align:center" ></ol>
+                    </div>
+                </div>
+            </div>
+        <!-- 获取参数定点数 -->
+            <div aria-label="Show template selection, collapsible" class="form-row">
+                <b id="show-ParameterFixedPoint-props" title="">
+                    <i class="fa fa-caret-right"></i> 获取参数定点数
+                </b>
+                <div id="analog-ParameterFixedPoint" aria-label="Hideable Template Settings Section" style="display:hidden;border:1px solid silver;padding:.5em;">
+                    <div class="form-row">
+                        <label style="min-width:180px" for="node-input-ParameterFixedPoint_Custom_num"><i class="fa fa-th"></i> <span>用户自定义参数内容数量</span></label>
+                        <input type="number" id="node-input-ParameterFixedPoint_Custom_num" style="max-width:80px">
+                    </div>
+                    <!-- Package List -->
+                    <label style="min-width:180px" ><i class="fa fa-th"></i> <span>参数</span></label>
+                    <div class="form-row node-input-ParameterFixedPoint-Data-container-row">
+                        <ol id="node-input-ParameterFixedPoint-Data-container" style="text-align:center" ></ol>
+                    </div>
+                    <!-- Package List -->
+                    <label style="min-width:180px" ><i class="fa fa-th"></i> <span>用户自定义参数内容</span></label>
+                    <div class="form-row node-input-ParameterFixedPoint-custom-container-row">
+                        <div class="form-row" style="width: 100%">
+                            <label style="width:30%;text-align:center"><span>名称</span></label>
+                            <label style="width:30%;text-align:center"><span>类型</span></label>
+                            <label style="width:30%;text-align:center"><span>值</span></label>
+                        </div>
+                        <ol id="node-input-ParameterFixedPoint-custom-container" style="text-align:center" ></ol>
+                    </div>
+                </div>
+            </div>
+        <!-- 获取参数浮点数 -->
+            <div aria-label="Show template selection, collapsible" class="form-row">
+                <b id="show-ParameterFloatingPoint-props" title="">
+                    <i class="fa fa-caret-right"></i> 获取参数浮点数
+                </b>
+                <div id="analog-ParameterFloatingPoint" aria-label="Hideable Template Settings Section" style="display:hidden;border:1px solid silver;padding:.5em;">
+                    <div class="form-row">
+                        <label style="min-width:180px" for="node-input-ParameterFloatingPoint_Custom_num"><i class="fa fa-th"></i> <span>用户自定义参数内容数量</span></label>
+                        <input type="number" id="node-input-ParameterFloatingPoint_Custom_num" style="max-width:80px">
+                    </div>
+                    <!-- Package List -->
+                    <label style="min-width:180px" ><i class="fa fa-th"></i> <span>参数</span></label>
+                    <div class="form-row node-input-ParameterFloatingPoint-Data-container-row">
+                        <ol id="node-input-ParameterFloatingPoint-Data-container" style="text-align:center" ></ol>
+                    </div>
+                    <!-- Package List -->
+                    <label style="min-width:180px" ><i class="fa fa-th"></i> <span>用户自定义参数内容</span></label>
+                    <div class="form-row node-input-ParameterFloatingPoint-custom-container-row">
+                        <div class="form-row" style="width: 100%">
+                            <label style="width:30%;text-align:center"><span>名称</span></label>
+                            <label style="width:30%;text-align:center"><span>类型</span></label>
+                            <label style="width:30%;text-align:center"><span>值</span></label>
+                        </div>
+                        <ol id="node-input-ParameterFloatingPoint-custom-container" style="text-align:center" ></ol>
+                    </div>
+                </div>
+            </div>
+        <!-- 设置参数定点数 -->
+            <div aria-label="Show template selection, collapsible" class="form-row">
+                <b id="show-SetParametersFixedPoint-props" title="">
+                    <i class="fa fa-caret-right"></i> 设置参数定点数
+                </b>
+                <div id="analog-SetParametersFixedPoint" aria-label="Hideable Template Settings Section" style="display:hidden;border:1px solid silver;padding:.5em;">
+                    <div class="form-row">
+                        <label style="min-width:180px" for="node-input-SetParametersFixedPoint_Custom_num"><i class="fa fa-th"></i> <span>用户自定义参数内容数量</span></label>
+                        <input type="number" id="node-input-SetParametersFixedPoint_Custom_num" style="max-width:80px">
+                    </div>
+                    <!-- Package List -->
+                    <label style="min-width:180px" ><i class="fa fa-th"></i> <span>参数</span></label>
+                    <div class="form-row node-input-SetParametersFixedPoint-Data-container-row">
+                        <ol id="node-input-SetParametersFixedPoint-Data-container" style="text-align:center" ></ol>
+                    </div>
+                    <!-- Package List -->
+                    <label style="min-width:180px" ><i class="fa fa-th"></i> <span>用户自定义参数内容</span></label>
+                    <div class="form-row node-input-SetParametersFixedPoint-custom-container-row">
+                        <div class="form-row" style="width: 100%">
+                            <label style="width:30%;text-align:center"><span>名称</span></label>
+                            <label style="width:30%;text-align:center"><span>类型</span></label>
+                            <label style="width:30%;text-align:center"><span>值</span></label>
+                        </div>
+                        <ol id="node-input-SetParametersFixedPoint-custom-container" style="text-align:center" ></ol>
+                    </div>
+                </div>
+            </div>
+        <!-- 设置参数浮点数 -->
+            <div aria-label="Show template selection, collapsible" class="form-row">
+                <b id="show-SetParametersFloatingPoint-props" title="">
+                    <i class="fa fa-caret-right"></i> 设置参数浮点数
+                </b>
+                <div id="analog-SetParametersFloatingPoint" aria-label="Hideable Template Settings Section" style="display:hidden;border:1px solid silver;padding:.5em;">
+                    <div class="form-row">
+                        <label style="min-width:180px" for="node-input-SetParametersFloatingPoint_Custom_num"><i class="fa fa-th"></i> <span>用户自定义参数内容数量</span></label>
+                        <input type="number" id="node-input-SetParametersFloatingPoint_Custom_num" style="max-width:80px">
+                    </div>
+                    <!-- Package List -->
+                    <label style="min-width:180px" ><i class="fa fa-th"></i> <span>参数</span></label>
+                    <div class="form-row node-input-SetParametersFloatingPoint-Data-container-row">
+                        <ol id="node-input-SetParametersFloatingPoint-Data-container" style="text-align:center" ></ol>
+                    </div>
+                    <!-- Package List -->
+                    <label style="min-width:180px" ><i class="fa fa-th"></i> <span>用户自定义参数内容</span></label>
+                    <div class="form-row node-input-SetParametersFloatingPoint-custom-container-row">
+                        <div class="form-row" style="width: 100%">
+                            <label style="width:30%;text-align:center"><span>名称</span></label>
+                            <label style="width:30%;text-align:center"><span>类型</span></label>
+                            <label style="width:30%;text-align:center"><span>值</span></label>
+                        </div>
+                        <ol id="node-input-SetParametersFloatingPoint-custom-container" style="text-align:center" ></ol>
+                    </div>
+                </div>
+            </div>
+        <!-- 用户自定义数 -->
+            <div aria-label="Show template selection, collapsible" class="form-row">
+                <b id="show-User-props" title="">
+                    <i class="fa fa-caret-right"></i> 用户自定义数据
+                </b>
+                <div id="analog-User" aria-label="Hideable Template Settings Section" style="display:hidden;border:1px solid silver;padding:.5em;">
+                    <div class="form-row">
+                        <label style="min-width:180px" for="node-input-User_Custom_num"><i class="fa fa-th"></i> <span>用户自定义数据数量</span></label>
+                        <input type="number" id="node-input-User_Custom_num" style="max-width:80px">
+                    </div>
+                    <!-- Package List -->
+                    <label style="min-width:180px" ><i class="fa fa-th"></i> <span>用户自定义数据</span></label>
+                    <div class="form-row node-input-User-custom-container-row">
+                        <div class="form-row" style="width: 100%">
+                            <label style="width:30%;text-align:center"><span>名称</span></label>
+                            <label style="width:30%;text-align:center"><span>类型</span></label>
+                            <label style="width:30%;text-align:center"><span>值</span></label>
+                        </div>
+                        <ol id="node-input-User-custom-container" style="text-align:center" ></ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 设备设置tab -->
+        <div id="data-history-tab" style="display:none">
+            <div class="form-row">
+                <label style="min-width:220px" for="node-input-HistoricalDataFloatingPoint_Data"><i class="fa fa-table"></i>    历史数据浮点数</label>
+                <input style="max-width:320px" type="text" id="node-input-HistoricalDataFloatingPoint_Data">
+            </div>
+            <div class="form-row">
+                <label style="min-width:220px" for="node-input-HistoricalDataFloatingPoint_custom"><i class="fa fa-table"></i>    历史数据浮点自定义数</label>
+                <input style="max-width:320px" type="text" id="node-input-HistoricalDataFloatingPoint_custom">
+            </div>
+            <div class="form-row">
+                <label style="min-width:220px" for="node-input-HistoricalDataFloatingPoint_Custom_num"><i class="fa fa-table"></i>    历史数据浮点自定义数数量</label>
+                <input style="max-width:320px" type="text" id="node-input-HistoricalDataFloatingPoint_Custom_num">
+            </div>
+            <div class="form-row">
+                <label style="min-width:220px" for="node-input-HistoricalDataFixedPoint_Data"><i class="fa fa-table"></i>    历史数据定点数</label>
+                <input style="max-width:320px" type="text" id="node-input-HistoricalDataFixedPoint_Data">
+            </div>
+            <div class="form-row">
+                <label style="min-width:220px" for="node-input-HistoricalDataFixedPoint_custom"><i class="fa fa-table"></i>    历史数据定点自定义数</label>
+                <input style="max-width:320px" type="text" id="node-input-HistoricalDataFixedPoint_custom">
+            </div>
+            <div class="form-row">
+                <label style="min-width:220px" for="node-input-HistoricalDataFixedPoint_Custom_num"><i class="fa fa-table"></i>    历史数据定点自定义数数量</label>
+                <input style="max-width:320px" type="text" id="node-input-HistoricalDataFixedPoint_Custom_num">
+            </div>
+            <div class="form-row">
+                <label style="min-width:220px" for="node-input-HistoricalAlarm_Data"><i class="fa fa-warning"></i>    历史告警数</label>
+                <input style="max-width:320px" type="text" id="node-input-HistoricalAlarm_Data">
+            </div>
+            <div class="form-row">
+                <label style="min-width:220px" for="node-input-HistoricalAlarm_custom"><i class="fa fa-warning"></i>    历史告警自定义数</label>
+                <input style="max-width:320px" type="text" id="node-input-HistoricalAlarm_custom">
+            </div>
+            <div class="form-row">
+                <label style="min-width:220px" for="node-input-HistoricalAlarm_Custom_num"><i class="fa fa-warning"></i>    历史告警自定义数数量</label>
+                <input style="max-width:320px" type="text" id="node-input-HistoricalAlarm_Custom_num">
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/markdown" data-help-name="ydt-Lower-machine">
+### YD-T 1363.3-2014前端智能设备协议下位机节点
+
+### 输入Inputs
+
+##### 串口数据流
+
+对应串口节点，接收上位机发送的buff串口数据
+
+### 输出Outputs
+
+##### 1、返回串口数据流
+
+返回串口数据流给串口输出节点，提供上位机数据。
+
+##### 2、输出遥控参数
+
+当上位机发送遥控数据帧时，输出上位机遥控参数。
+
+输出格式，输出COMMAND TYPE的16进制字符，例：“0F”
+
+```
+—— COMMAND TYPE=00H ：遥控机组关机；  
+—— COMMAND TYPE=0FH ：遥控机组开机；  
+—— COMMAND TYPE=10H ：选择 1#机组主用；  
+—— COMMAND TYPE=1FH ：选择 2#机组主用；  
+—— COMMAND TYPE=FFH ：紧急停车
+```
+
+##### 3、输出设置参数
+
+当上位机发送设置数据帧时，输出上位机设置参数。
+
+输出参数格式：{"COMMAND_GROUP":"01","COMMAND_TYPE":"80","COMMAND_DATAF":"9C28"}
+
+```
+-------COMMAND GROUP =01H ：主备油机时，取油机 1 参数；单台油机时，取油机的参数；
+-------COMMAND GROUP =02H ：主备油机时，取油机 2 参数。
+```
+
+```
+COMMAND_TYPE：
+1 交流线/相电压 AB/A 上限 80H  
+2 交流线/相电压 AB/A 下限 81H  
+3 交流线/相电压 BC/B 上限 82H  
+4 交流线/相电压 BC/B 下限 83H  
+5 交流线/相电压 CA/C 上限 84H  
+6 交流线/相电压 CA/C 下限 85H  
+7 交流电流 A 上限 86H  
+8 交流电流 B 上限 87H  
+9 交流电流 C 上限 88H  
+10 频率/转速上限 89H  
+11 频率/转速下限 8AH  
+12 润滑油油压下限 8BH  
+13 润滑油油温上限 8CH  
+14 水温上限 8DH  
+15 电池电压上限 8EH  
+16 电池电压下限 8FH  
+17 用户自定义 C0H～EFH
+```
+
+##### 4、输出时间参数
+
+当上位机发送设置时间时，输出时间参数，含时间戳及日期时间格式字符串。
+
+输出参数格式：
+
+```
+{"timestamp":1654675810000,"Datetime":"2022-6-8 16:10:10"}
+```
+
+### 节点参数设置
+
+节点设置的相关参数可选择静态值（选择静态数据），或者设置为变量。
+
+###### 1、设置为静态数据
+
+设置为静态数据时，填入值为返回上位机的数据值。根据数据要求填入整数或浮点数。
+
+###### 2、设置为变量
+
+设置为变量时，填入值为变量名，此变量为全局变量，需要运行节点前已经定义此全局变量及赋值
+
+### 关于历史数据
+
+历史数据采用变量形式储存，在节点设置中设置全局变量名，节点收到获取历史数据帧时，通过设置的变量，获取变量内的值作为历史数据返回，变量值例：
+
+```
+ [
+    [
+        {
+            name: "输出线/相电压AB/A",
+            datavalue: 1
+        },
+        {
+            name: "输出线/相电压BC/B",
+            datavalue: 2
+        },
+        {
+            name: "输出线/相电压CA/C",
+            datavalue: 3
+        },
+        {
+            name: "输出电流A",
+            datavalue: 4
+        },
+        {
+            name: "输出电流B",
+            datavalue: 5
+        },
+        {
+            name: "输出电流C",
+            datavalue: 6
+        },
+        {
+            name: "输出频率/转速",
+            datavalue: 7
+        },
+        {
+            name: "水温（水冷）",
+            datavalue: 8
+        },
+        {
+            name: "润滑油油温",
+            datavalue: 9
+        },
+        {
+            name: "润滑油油压",
+            datavalue: 10
+        },
+        {
+            name: "启动电池电压",
+            datavalue: 11
+        },
+        {
+            name: "输出功率",
+            datavalue: 12
+        },
+        {
+            name: "液（油）位",
+            datavalue: 13
+        }
+    ],
+    [
+        {
+            name: "输出线/相电压AB/A",
+            datavalue: 11
+        },
+        {
+            name: "输出线/相电压BC/B",
+            datavalue: 21
+        },
+        {
+            name: "输出线/相电压CA/C",
+            datavalue: 31
+        },
+        {
+            name: "输出电流A",
+            datavalue: 41
+        },
+        {
+            name: "输出电流B",
+            datavalue: 51
+        },
+        {
+            name: "输出电流C",
+            datavalue: 61
+        },
+        {
+            name: "输出频率/转速",
+            datavalue: 71
+        },
+        {
+            name: "水温（水冷）",
+            datavalue: 81
+        },
+        {
+            name: "润滑油油温",
+            datavalue: 91
+        },
+        {
+            name: "润滑油油压",
+            datavalue: 101
+        },
+        {
+            name: "启动电池电压",
+            datavalue: 111
+        },
+        {
+            name: "输出功率",
+            datavalue: 121
+        },
+        {
+            name: "液（油）位",
+            datavalue: 131
+        }
+    ]
+    ]
+```
+</script>
