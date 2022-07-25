@@ -1,6 +1,6 @@
 {
     "name" : "@zhaozhengde/node-red-contrib-ydt-13633-2014",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "ydt-13633-2014",
     "main": "ydt-13633-2014.js",
     "node-red" : {
