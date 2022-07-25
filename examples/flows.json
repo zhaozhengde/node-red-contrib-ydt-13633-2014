@@ -1,0 +1,864 @@
+[
+    {
+        "id": "f9bd24c5de31e943",
+        "type": "tab",
+        "label": "流程 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e15e04c088e734ac",
+        "type": "serial out",
+        "z": "f9bd24c5de31e943",
+        "name": "",
+        "serial": "30f5361cebd0a311",
+        "x": 790,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "b100e44ef254f40c",
+        "type": "serial in",
+        "z": "f9bd24c5de31e943",
+        "name": "",
+        "serial": "30f5361cebd0a311",
+        "x": 210,
+        "y": 320,
+        "wires": [
+            [
+                "ff2fcd19fea89b62"
+            ]
+        ]
+    },
+    {
+        "id": "2c25d2ed42cbe1a5",
+        "type": "function",
+        "z": "f9bd24c5de31e943",
+        "name": "设置报警及开关量变化标志位",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// 部署节点后，此处添加的代码将运行一次。 \nglobal.set(\"swichstatus\",0);\nglobal.set(\"alarmstatus\",0);",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c829d95e142ffec3",
+        "type": "debug",
+        "z": "f9bd24c5de31e943",
+        "name": "遥控数据",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 810,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "eecf703943ad88cd",
+        "type": "debug",
+        "z": "f9bd24c5de31e943",
+        "name": "设置数据",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 810,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "ae63f4f6b64aa9e1",
+        "type": "function",
+        "z": "f9bd24c5de31e943",
+        "name": "设置全局变量",
+        "func": "global.set(\"DateTimeNow1\",msg.payload);\nmsg.payload = global.get(\"HistoricalDataFloatingPoint\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// 部署节点后，此处添加的代码将运行一次。 \nlet V = [\n    [\n        {\n            name: \"输出线/相电压AB/A\",\n            datavalue: 1\n        },\n        {\n            name: \"输出线/相电压BC/B\",\n            datavalue: 2\n        },\n        {\n            name: \"输出线/相电压CA/C\",\n            datavalue: 3\n        },\n        {\n            name: \"输出电流A\",\n            datavalue: 4\n        },\n        {\n            name: \"输出电流B\",\n            datavalue: 5\n        },\n        {\n            name: \"输出电流C\",\n            datavalue: 6\n        },\n        {\n            name: \"输出频率/转速\",\n            datavalue: 7\n        },\n        {\n            name: \"水温（水冷）\",\n            datavalue: 8\n        },\n        {\n            name: \"润滑油油温\",\n            datavalue: 9\n        },\n        {\n            name: \"润滑油油压\",\n            datavalue: 10\n        },\n        {\n            name: \"启动电池电压\",\n            datavalue: 11\n        },\n        {\n            name: \"输出功率\",\n            datavalue: 12\n        },\n        {\n            name: \"液（油）位\",\n            datavalue: 13\n        }\n    ],\n    [\n        {\n            name: \"输出线/相电压AB/A\",\n            datavalue: 11\n        },\n        {\n            name: \"输出线/相电压BC/B\",\n            datavalue: 21\n        },\n        {\n            name: \"输出线/相电压CA/C\",\n            datavalue: 31\n        },\n        {\n            name: \"输出电流A\",\n            datavalue: 41\n        },\n        {\n            name: \"输出电流B\",\n            datavalue: 51\n        },\n        {\n            name: \"输出电流C\",\n            datavalue: 61\n        },\n        {\n            name: \"输出频率/转速\",\n            datavalue: 71\n        },\n        {\n            name: \"水温（水冷）\",\n            datavalue: 81\n        },\n        {\n            name: \"润滑油油温\",\n            datavalue: 91\n        },\n        {\n            name: \"润滑油油压\",\n            datavalue: 101\n        },\n        {\n            name: \"启动电池电压\",\n            datavalue: 111\n        },\n        {\n            name: \"输出功率\",\n            datavalue: 121\n        },\n        {\n            name: \"液（油）位\",\n            datavalue: 131\n        }\n    ],\n    [\n        {\n            name: \"输出线/相电压AB/A\",\n            datavalue: 12\n        },\n        {\n            name: \"输出线/相电压BC/B\",\n            datavalue: 22\n        },\n        {\n            name: \"输出线/相电压CA/C\",\n            datavalue: 32\n        },\n        {\n            name: \"输出电流A\",\n            datavalue: 42\n        },\n        {\n            name: \"输出电流B\",\n            datavalue: 52\n        },\n        {\n            name: \"输出电流C\",\n            datavalue: 62\n        },\n        {\n            name: \"输出频率/转速\",\n            datavalue: 72\n        },\n        {\n            name: \"水温（水冷）\",\n            datavalue: 82\n        },\n        {\n            name: \"润滑油油温\",\n            datavalue: 92\n        },\n        {\n            name: \"润滑油油压\",\n            datavalue: 102\n        },\n        {\n            name: \"启动电池电压\",\n            datavalue: 112\n        },\n        {\n            name: \"输出功率\",\n            datavalue: 122\n        },\n        {\n            name: \"液（油）位\",\n            datavalue: 132\n        }\n    ]\n    ]\nglobal.set(\"HistoricalDataFloatingPoint\",V);\nglobal.set(\"HistoricalDataFloatingPointCustomNum\",3);\nlet C = [\n    [\n        {\n            name: \"铝空电流\",\n            datavalue: 122.5\n        },\n        {\n            name: \"铝空电压\",\n            datavalue: 23.98\n        },\n        {\n            name: \"铝空功率\",\n            datavalue: 3.123\n        }\n        \n    ],\n     [\n        {\n            name: \"铝空电流\",\n            datavalue: 222.5\n        },\n        {\n            name: \"铝空电压\",\n            datavalue: 13.98\n        },\n        {\n            name: \"铝空功率\",\n            datavalue: 23.123\n        }\n        \n    ],\n     [\n        {\n            name: \"铝空电流\",\n            datavalue: 100.5\n        },\n        {\n            name: \"铝空电压\",\n            datavalue: 12.98\n        },\n        {\n            name: \"铝空功率\",\n            datavalue: 34.123\n        }\n        \n    ]\n    ]\nglobal.set(\"HistoricalDataFloatingPointCustom\",C);\n\nlet VI = [\n    [\n        {\n            name: \"输出线/相电压AB/A\",\n            datavalue: 1\n        },\n        {\n            name: \"输出线/相电压BC/B\",\n            datavalue: 2\n        },\n        {\n            name: \"输出线/相电压CA/C\",\n            datavalue: 3\n        },\n        {\n            name: \"输出电流A\",\n            datavalue: 4\n        },\n        {\n            name: \"输出电流B\",\n            datavalue: 5\n        },\n        {\n            name: \"输出电流C\",\n            datavalue: 6\n        },\n        {\n            name: \"输出频率/转速\",\n            datavalue: 7\n        },\n        {\n            name: \"水温（水冷）\",\n            datavalue: 8\n        },\n        {\n            name: \"润滑油油温\",\n            datavalue: 9\n        },\n        {\n            name: \"润滑油油压\",\n            datavalue: 10\n        },\n        {\n            name: \"启动电池电压\",\n            datavalue: 11\n        },\n        {\n            name: \"输出功率\",\n            datavalue: 12\n        },\n        {\n            name: \"液（油）位\",\n            datavalue: 13\n        }\n    ],\n    [\n        {\n            name: \"输出线/相电压AB/A\",\n            datavalue: 11\n        },\n        {\n            name: \"输出线/相电压BC/B\",\n            datavalue: 21\n        },\n        {\n            name: \"输出线/相电压CA/C\",\n            datavalue: 31\n        },\n        {\n            name: \"输出电流A\",\n            datavalue: 41\n        },\n        {\n            name: \"输出电流B\",\n            datavalue: 51\n        },\n        {\n            name: \"输出电流C\",\n            datavalue: 61\n        },\n        {\n            name: \"输出频率/转速\",\n            datavalue: 71\n        },\n        {\n            name: \"水温（水冷）\",\n            datavalue: 81\n        },\n        {\n            name: \"润滑油油温\",\n            datavalue: 91\n        },\n        {\n            name: \"润滑油油压\",\n            datavalue: 101\n        },\n        {\n            name: \"启动电池电压\",\n            datavalue: 111\n        },\n        {\n            name: \"输出功率\",\n            datavalue: 121\n        },\n        {\n            name: \"液（油）位\",\n            datavalue: 131\n        }\n    ],\n    [\n        {\n            name: \"输出线/相电压AB/A\",\n            datavalue: 12\n        },\n        {\n            name: \"输出线/相电压BC/B\",\n            datavalue: 22\n        },\n        {\n            name: \"输出线/相电压CA/C\",\n            datavalue: 32\n        },\n        {\n            name: \"输出电流A\",\n            datavalue: 42\n        },\n        {\n            name: \"输出电流B\",\n            datavalue: 52\n        },\n        {\n            name: \"输出电流C\",\n            datavalue: 62\n        },\n        {\n            name: \"输出频率/转速\",\n            datavalue: 72\n        },\n        {\n            name: \"水温（水冷）\",\n            datavalue: 82\n        },\n        {\n            name: \"润滑油油温\",\n            datavalue: 92\n        },\n        {\n            name: \"润滑油油压\",\n            datavalue: 102\n        },\n        {\n            name: \"启动电池电压\",\n            datavalue: 112\n        },\n        {\n            name: \"输出功率\",\n            datavalue: 122\n        },\n        {\n            name: \"液（油）位\",\n            datavalue: 132\n        }\n    ]\n    ]\nglobal.set(\"HistoricalDataFixedPoint\",VI);\nglobal.set(\"HistoricalDataFixedPointCustomNum\",3);\nlet CI = [\n    [\n        {\n            name: \"铝空电流\",\n            datavalue: 1225\n        },\n        {\n            name: \"铝空电压\",\n            datavalue: 2398\n        },\n        {\n            name: \"铝空功率\",\n            datavalue: 3123\n        }\n        \n    ],\n     [\n        {\n            name: \"铝空电流\",\n            datavalue: 2225\n        },\n        {\n            name: \"铝空电压\",\n            datavalue: 1398\n        },\n        {\n            name: \"铝空功率\",\n            datavalue: 23123\n        }\n        \n    ],\n     [\n        {\n            name: \"铝空电流\",\n            datavalue: 1005\n        },\n        {\n            name: \"铝空电压\",\n            datavalue: 1298\n        },\n        {\n            name: \"铝空功率\",\n            datavalue: 34123\n        }\n        \n    ]\n    ]\nglobal.set(\"HistoricalDataFixedPointCustom\",CI);\nlet VA = [\n    [\n        {\n            name: \"交流线/相电压AB/A\",\n            datavalue: 1\n        },\n        {\n            name: \"交流线/相电压BC/B\",\n            datavalue: 0\n        },\n        {\n            name: \"交流线/相电压CA/C\",\n            datavalue: 2\n        },\n        {\n            name: \"交流电流A\",\n            datavalue: 0\n        },\n        {\n            name: \"交流电流B\",\n            datavalue: 1\n        },\n        {\n            name: \"交流电流C\",\n            datavalue: 2\n        },\n        {\n            name: \"频率/转速\",\n            datavalue: 2\n        },\n        {\n            name: \"水温（水冷）/皮带断裂（风冷）\",\n            datavalue: 1\n        },\n        {\n            name: \"润滑油油温\",\n            datavalue: 0\n        },\n        {\n            name: \"润滑油油压\",\n            datavalue: 0\n        },\n        {\n            name: \"启动失败\",\n            datavalue: 0\n        },\n        {\n            name: \"负载\",\n            datavalue: 0\n        },\n        {\n            name: \"启动电池电压\",\n            datavalue: 1\n        },\n        {\n            name: \"紧急停车\",\n            datavalue: 1\n        },\n        {\n            name: \"市电\",\n            datavalue: 2\n        },\n        {\n            name: \"充电器\",\n            datavalue: 240\n        }\n    ],\n    [\n        {\n            name: \"交流线/相电压AB/A\",\n            datavalue: 2\n        },\n        {\n            name: \"交流线/相电压BC/B\",\n            datavalue: 0\n        },\n        {\n            name: \"交流线/相电压CA/C\",\n            datavalue: 2\n        },\n        {\n            name: \"交流电流A\",\n            datavalue: 0\n        },\n        {\n            name: \"交流电流B\",\n            datavalue: 1\n        },\n        {\n            name: \"交流电流C\",\n            datavalue: 2\n        },\n        {\n            name: \"频率/转速\",\n            datavalue: 2\n        },\n        {\n            name: \"水温（水冷）/皮带断裂（风冷）\",\n            datavalue: 1\n        },\n        {\n            name: \"润滑油油温\",\n            datavalue: 0\n        },\n        {\n            name: \"润滑油油压\",\n            datavalue: 0\n        },\n        {\n            name: \"启动失败\",\n            datavalue: 0\n        },\n        {\n            name: \"负载\",\n            datavalue: 0\n        },\n        {\n            name: \"启动电池电压\",\n            datavalue: 1\n        },\n        {\n            name: \"紧急停车\",\n            datavalue: 1\n        },\n        {\n            name: \"市电\",\n            datavalue: 2\n        },\n        {\n            name: \"充电器\",\n            datavalue: 240\n        }\n    ],\n    [\n        {\n            name: \"交流线/相电压AB/A\",\n            datavalue: 240\n        },\n        {\n            name: \"交流线/相电压BC/B\",\n            datavalue: 0\n        },\n        {\n            name: \"交流线/相电压CA/C\",\n            datavalue: 2\n        },\n        {\n            name: \"交流电流A\",\n            datavalue: 0\n        },\n        {\n            name: \"交流电流B\",\n            datavalue: 1\n        },\n        {\n            name: \"交流电流C\",\n            datavalue: 2\n        },\n        {\n            name: \"频率/转速\",\n            datavalue: 2\n        },\n        {\n            name: \"水温（水冷）/皮带断裂（风冷）\",\n            datavalue: 1\n        },\n        {\n            name: \"润滑油油温\",\n            datavalue: 0\n        },\n        {\n            name: \"润滑油油压\",\n            datavalue: 0\n        },\n        {\n            name: \"启动失败\",\n            datavalue: 0\n        },\n        {\n            name: \"负载\",\n            datavalue: 0\n        },\n        {\n            name: \"启动电池电压\",\n            datavalue: 1\n        },\n        {\n            name: \"紧急停车\",\n            datavalue: 1\n        },\n        {\n            name: \"市电\",\n            datavalue: 2\n        },\n        {\n            name: \"充电器\",\n            datavalue: 240\n        }\n    ]\n    ]\nglobal.set(\"HistoricalAlarm\",VA);\nglobal.set(\"HistoricalAlarmCustomNum\",3);\nlet CA = [\n    [\n         {\n            name: \"紧急停车\",\n            datavalue: 1\n        },\n        {\n            name: \"市电\",\n            datavalue: 2\n        },\n        {\n            name: \"充电器\",\n            datavalue: 240\n        }\n        \n    ],\n     [\n        {\n            name: \"紧急停车\",\n            datavalue: 1\n        },\n        {\n            name: \"市电\",\n            datavalue: 2\n        },\n        {\n            name: \"充电器\",\n            datavalue: 240\n        }\n        \n    ],\n     [\n        {\n            name: \"紧急停车\",\n            datavalue: 1\n        },\n        {\n            name: \"市电\",\n            datavalue: 2\n        },\n        {\n            name: \"充电器\",\n            datavalue: 240\n        }\n        \n    ]\n    ]\nglobal.set(\"HistoricalAlarmCustom\",CA);\nglobal.set(\"DateTimeNow1\",0);",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 480,
+        "wires": [
+            [
+                "873c59d18d6fb87e"
+            ]
+        ]
+    },
+    {
+        "id": "53278d1cf78ae9ec",
+        "type": "inject",
+        "z": "f9bd24c5de31e943",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 480,
+        "wires": [
+            [
+                "ae63f4f6b64aa9e1"
+            ]
+        ]
+    },
+    {
+        "id": "873c59d18d6fb87e",
+        "type": "debug",
+        "z": "f9bd24c5de31e943",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "b6219e3f1d8d3843",
+        "type": "debug",
+        "z": "f9bd24c5de31e943",
+        "name": "设置时间",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "ff2fcd19fea89b62",
+        "type": "ydt-Lower-machine",
+        "z": "f9bd24c5de31e943",
+        "name": "",
+        "LowerMachineType": "28",
+        "DeviceAddress": "1",
+        "Version": "1.00",
+        "switch_status": "SwitchStatus",
+        "alarm_status": "AlarmStatus",
+        "RemoteControl": "RemoteControl",
+        "ManufacturerInformation": "厂家名称",
+        "ManufacturerEdition": "1.00",
+        "ManufacturerDevice": "铝空机组",
+        "DatetimeGroup": "DateTimeNow",
+        "HistoricalDataFloatingPoint_Data": "HistoricalDataFloatingPoint",
+        "HistoricalDataFloatingPoint_custom": "HistoricalDataFloatingPointCustom",
+        "HistoricalDataFloatingPoint_Custom_num": "HistoricalDataFloatingPointCustomNum",
+        "HistoricalDataFixedPoint_Data": "HistoricalDataFixedPoint",
+        "HistoricalDataFixedPoint_custom": "HistoricalDataFixedPointCustom",
+        "HistoricalDataFixedPoint_Custom_num": "HistoricalDataFixedPointCustomNum",
+        "HistoricalAlarm_Data": "HistoricalAlarm",
+        "HistoricalAlarm_custom": "HistoricalAlarmCustom",
+        "HistoricalAlarm_Custom_num": "HistoricalAlarmCustomNum",
+        "AnalogQuantityFixedPoint_Custom_num": 1,
+        "AnalogQuantityFixedPoint_custom": [
+            {
+                "name": "1",
+                "datatype": "num",
+                "datavalue": "1"
+            }
+        ],
+        "AnalogQuantityFixedPoint_Data": [
+            {
+                "name": "输出线/相电压AB/A",
+                "datatype": "num",
+                "datavalue": "1"
+            },
+            {
+                "name": "输出线/相电压BC/B",
+                "datatype": "num",
+                "datavalue": "1"
+            },
+            {
+                "name": "输出线/相电压CA/C",
+                "datatype": "num",
+                "datavalue": "1"
+            },
+            {
+                "name": "输出电流A",
+                "datatype": "num",
+                "datavalue": "1"
+            },
+            {
+                "name": "输出电流B",
+                "datatype": "num",
+                "datavalue": "1"
+            },
+            {
+                "name": "输出电流C",
+                "datatype": "num",
+                "datavalue": "1"
+            },
+            {
+                "name": "输出频率/转速",
+                "datatype": "num",
+                "datavalue": "1"
+            },
+            {
+                "name": "水温（水冷）",
+                "datatype": "num",
+                "datavalue": "1"
+            },
+            {
+                "name": "润滑油油温",
+                "datatype": "num",
+                "datavalue": "1"
+            },
+            {
+                "name": "润滑油油压",
+                "datatype": "num",
+                "datavalue": "1"
+            },
+            {
+                "name": "启动电池电压",
+                "datatype": "num",
+                "datavalue": "1"
+            },
+            {
+                "name": "输出功率",
+                "datatype": "num",
+                "datavalue": "1"
+            },
+            {
+                "name": "液（油）位",
+                "datatype": "num",
+                "datavalue": "1"
+            }
+        ],
+        "AnalogFloatingPoint_Custom_num": 1,
+        "AnalogFloatingPoint_Data": [
+            {
+                "name": "输出线/相电压AB/A",
+                "datatype": "num",
+                "datavalue": "2"
+            },
+            {
+                "name": "输出线/相电压BC/B",
+                "datatype": "num",
+                "datavalue": "2"
+            },
+            {
+                "name": "输出线/相电压CA/C",
+                "datatype": "num",
+                "datavalue": "2"
+            },
+            {
+                "name": "输出电流A",
+                "datatype": "num",
+                "datavalue": "2"
+            },
+            {
+                "name": "输出电流B",
+                "datatype": "num",
+                "datavalue": "2"
+            },
+            {
+                "name": "输出电流C",
+                "datatype": "num",
+                "datavalue": "2"
+            },
+            {
+                "name": "输出频率/转速",
+                "datatype": "num",
+                "datavalue": "2"
+            },
+            {
+                "name": "水温（水冷）",
+                "datatype": "num",
+                "datavalue": "2"
+            },
+            {
+                "name": "润滑油油温",
+                "datatype": "num",
+                "datavalue": "2"
+            },
+            {
+                "name": "润滑油油压",
+                "datatype": "num",
+                "datavalue": "2"
+            },
+            {
+                "name": "启动电池电压",
+                "datatype": "num",
+                "datavalue": "2"
+            },
+            {
+                "name": "输出功率",
+                "datatype": "num",
+                "datavalue": "2"
+            },
+            {
+                "name": "液（油）位",
+                "datatype": "num",
+                "datavalue": "2"
+            }
+        ],
+        "AnalogFloatingPoint_custom": [
+            {
+                "name": "2",
+                "datatype": "num",
+                "datavalue": "2"
+            }
+        ],
+        "Switching_Data": [
+            {
+                "name": "自动/手动状态",
+                "datatype": "num",
+                "datavalue": "3"
+            },
+            {
+                "name": "停机/运行状态",
+                "datatype": "num",
+                "datavalue": "3"
+            },
+            {
+                "name": "市电/油机ATS状态",
+                "datatype": "num",
+                "datavalue": "3"
+            },
+            {
+                "name": "主备油机",
+                "datatype": "num",
+                "datavalue": "3"
+            }
+        ],
+        "Switching_custom": [
+            {
+                "name": "3",
+                "datatype": "num",
+                "datavalue": "3"
+            }
+        ],
+        "Switching_Custom_num": 1,
+        "Alarm_Data": [
+            {
+                "name": "交流线/相电压AB/A",
+                "datatype": "num",
+                "datavalue": "4"
+            },
+            {
+                "name": "交流线/相电压BC/B",
+                "datatype": "num",
+                "datavalue": "4"
+            },
+            {
+                "name": "交流线/相电压CA/C",
+                "datatype": "num",
+                "datavalue": "4"
+            },
+            {
+                "name": "交流电流A",
+                "datatype": "num",
+                "datavalue": "4"
+            },
+            {
+                "name": "交流电流B",
+                "datatype": "num",
+                "datavalue": "4"
+            },
+            {
+                "name": "交流电流C",
+                "datatype": "num",
+                "datavalue": "4"
+            },
+            {
+                "name": "频率/转速",
+                "datatype": "num",
+                "datavalue": "4"
+            },
+            {
+                "name": "水温（水冷）/皮带断裂（风冷）",
+                "datatype": "num",
+                "datavalue": "4"
+            },
+            {
+                "name": "润滑油油温",
+                "datatype": "num",
+                "datavalue": "4"
+            },
+            {
+                "name": "润滑油油压",
+                "datatype": "num",
+                "datavalue": "4"
+            },
+            {
+                "name": "启动失败",
+                "datatype": "num",
+                "datavalue": "4"
+            },
+            {
+                "name": "负载",
+                "datatype": "num",
+                "datavalue": "4"
+            },
+            {
+                "name": "启动电池电压",
+                "datatype": "num",
+                "datavalue": "4"
+            },
+            {
+                "name": "紧急停车",
+                "datatype": "num",
+                "datavalue": "4"
+            },
+            {
+                "name": "市电",
+                "datatype": "num",
+                "datavalue": "4"
+            },
+            {
+                "name": "充电器",
+                "datatype": "num",
+                "datavalue": "4"
+            }
+        ],
+        "Alarm_custom": [
+            {
+                "name": "4",
+                "datatype": "num",
+                "datavalue": "4"
+            }
+        ],
+        "Alarm_Custom_num": 1,
+        "ParameterFixedPoint_Data": [
+            {
+                "name": "交流线/相电压AB/A上限",
+                "datatype": "num",
+                "datavalue": "5"
+            },
+            {
+                "name": "交流线/相电压AB/A下限",
+                "datatype": "num",
+                "datavalue": "5"
+            },
+            {
+                "name": "交流线/相电压BC/B上限",
+                "datatype": "num",
+                "datavalue": "5"
+            },
+            {
+                "name": "交流线/相电压BC/B下限",
+                "datatype": "num",
+                "datavalue": "5"
+            },
+            {
+                "name": "交流线/相电压CA/C上限",
+                "datatype": "num",
+                "datavalue": "5"
+            },
+            {
+                "name": "交流线/相电压CA/C下限",
+                "datatype": "num",
+                "datavalue": "5"
+            },
+            {
+                "name": "交流电流A上限",
+                "datatype": "num",
+                "datavalue": "5"
+            },
+            {
+                "name": "交流电流B上限",
+                "datatype": "num",
+                "datavalue": "5"
+            },
+            {
+                "name": "交流电流C上限",
+                "datatype": "num",
+                "datavalue": "5"
+            },
+            {
+                "name": "频率/转速上限",
+                "datatype": "num",
+                "datavalue": "5"
+            },
+            {
+                "name": "频率/转速下限",
+                "datatype": "num",
+                "datavalue": "5"
+            },
+            {
+                "name": "润滑油油压下限",
+                "datatype": "num",
+                "datavalue": "5"
+            },
+            {
+                "name": "润滑油油温上限",
+                "datatype": "num",
+                "datavalue": "5"
+            },
+            {
+                "name": "水温上限",
+                "datatype": "num",
+                "datavalue": "5"
+            },
+            {
+                "name": "电池电压上限",
+                "datatype": "num",
+                "datavalue": "5"
+            },
+            {
+                "name": "电池电压下限",
+                "datatype": "num",
+                "datavalue": "5"
+            }
+        ],
+        "ParameterFixedPoint_custom": [
+            {
+                "name": "5",
+                "datatype": "num",
+                "datavalue": "5"
+            }
+        ],
+        "ParameterFixedPoint_Custom_num": 1,
+        "ParameterFloatingPoint_Data": [
+            {
+                "name": "交流线/相电压AB/A上限",
+                "datatype": "num",
+                "datavalue": "6"
+            },
+            {
+                "name": "交流线/相电压AB/A下限",
+                "datatype": "num",
+                "datavalue": "6"
+            },
+            {
+                "name": "交流线/相电压BC/B上限",
+                "datatype": "num",
+                "datavalue": "6"
+            },
+            {
+                "name": "交流线/相电压BC/B下限",
+                "datatype": "num",
+                "datavalue": "6"
+            },
+            {
+                "name": "交流线/相电压CA/C上限",
+                "datatype": "num",
+                "datavalue": "6"
+            },
+            {
+                "name": "交流线/相电压CA/C下限",
+                "datatype": "num",
+                "datavalue": "6"
+            },
+            {
+                "name": "交流电流A上限",
+                "datatype": "num",
+                "datavalue": "6"
+            },
+            {
+                "name": "交流电流B上限",
+                "datatype": "num",
+                "datavalue": "6"
+            },
+            {
+                "name": "交流电流C上限",
+                "datatype": "num",
+                "datavalue": "6"
+            },
+            {
+                "name": "频率/转速上限",
+                "datatype": "num",
+                "datavalue": "6"
+            },
+            {
+                "name": "频率/转速下限",
+                "datatype": "num",
+                "datavalue": "6"
+            },
+            {
+                "name": "润滑油油压下限",
+                "datatype": "num",
+                "datavalue": "6"
+            },
+            {
+                "name": "润滑油油温上限",
+                "datatype": "num",
+                "datavalue": "6"
+            },
+            {
+                "name": "水温上限",
+                "datatype": "num",
+                "datavalue": "6"
+            },
+            {
+                "name": "电池电压上限",
+                "datatype": "num",
+                "datavalue": "6"
+            },
+            {
+                "name": "电池电压下限",
+                "datatype": "num",
+                "datavalue": "6"
+            }
+        ],
+        "ParameterFloatingPoint_custom": [
+            {
+                "name": "6",
+                "datatype": "num",
+                "datavalue": "6"
+            }
+        ],
+        "ParameterFloatingPoint_Custom_num": 1,
+        "SetParametersFloatingPoint_Data": [
+            {
+                "name": "交流线/相电压AB/A上限",
+                "datatype": "num",
+                "datavalue": "8"
+            },
+            {
+                "name": "交流线/相电压AB/A下限",
+                "datatype": "num",
+                "datavalue": "8"
+            },
+            {
+                "name": "交流线/相电压BC/B上限",
+                "datatype": "num",
+                "datavalue": "8"
+            },
+            {
+                "name": "交流线/相电压BC/B下限",
+                "datatype": "num",
+                "datavalue": "8"
+            },
+            {
+                "name": "交流线/相电压CA/C上限",
+                "datatype": "num",
+                "datavalue": "8"
+            },
+            {
+                "name": "交流线/相电压CA/C下限",
+                "datatype": "num",
+                "datavalue": "8"
+            },
+            {
+                "name": "交流电流A上限",
+                "datatype": "num",
+                "datavalue": "8"
+            },
+            {
+                "name": "交流电流B上限",
+                "datatype": "num",
+                "datavalue": "8"
+            },
+            {
+                "name": "交流电流C上限",
+                "datatype": "num",
+                "datavalue": "8"
+            },
+            {
+                "name": "频率/转速上限",
+                "datatype": "num",
+                "datavalue": "8"
+            },
+            {
+                "name": "频率/转速下限",
+                "datatype": "num",
+                "datavalue": "8"
+            },
+            {
+                "name": "润滑油油压下限",
+                "datatype": "num",
+                "datavalue": "8"
+            },
+            {
+                "name": "润滑油油温上限",
+                "datatype": "num",
+                "datavalue": "8"
+            },
+            {
+                "name": "水温上限",
+                "datatype": "num",
+                "datavalue": "8"
+            },
+            {
+                "name": "电池电压上限",
+                "datatype": "num",
+                "datavalue": "8"
+            },
+            {
+                "name": "电池电压下限",
+                "datatype": "num",
+                "datavalue": "8"
+            }
+        ],
+        "SetParametersFloatingPoint_custom": [
+            {
+                "name": "8",
+                "datatype": "num",
+                "datavalue": "8"
+            }
+        ],
+        "SetParametersFloatingPoint_Custom_num": 1,
+        "SetParametersFixedPoint_Data": [
+            {
+                "name": "交流线/相电压AB/A上限",
+                "datatype": "num",
+                "datavalue": "7"
+            },
+            {
+                "name": "交流线/相电压AB/A下限",
+                "datatype": "num",
+                "datavalue": "7"
+            },
+            {
+                "name": "交流线/相电压BC/B上限",
+                "datatype": "num",
+                "datavalue": "7"
+            },
+            {
+                "name": "交流线/相电压BC/B下限",
+                "datatype": "num",
+                "datavalue": "7"
+            },
+            {
+                "name": "交流线/相电压CA/C上限",
+                "datatype": "num",
+                "datavalue": "7"
+            },
+            {
+                "name": "交流线/相电压CA/C下限",
+                "datatype": "num",
+                "datavalue": "7"
+            },
+            {
+                "name": "交流电流A上限",
+                "datatype": "num",
+                "datavalue": "7"
+            },
+            {
+                "name": "交流电流B上限",
+                "datatype": "num",
+                "datavalue": "7"
+            },
+            {
+                "name": "交流电流C上限",
+                "datatype": "num",
+                "datavalue": "7"
+            },
+            {
+                "name": "频率/转速上限",
+                "datatype": "num",
+                "datavalue": "7"
+            },
+            {
+                "name": "频率/转速下限",
+                "datatype": "num",
+                "datavalue": "7"
+            },
+            {
+                "name": "润滑油油压下限",
+                "datatype": "num",
+                "datavalue": "7"
+            },
+            {
+                "name": "润滑油油温上限",
+                "datatype": "num",
+                "datavalue": "7"
+            },
+            {
+                "name": "水温上限",
+                "datatype": "num",
+                "datavalue": "7"
+            },
+            {
+                "name": "电池电压上限",
+                "datatype": "num",
+                "datavalue": "7"
+            },
+            {
+                "name": "电池电压下限",
+                "datatype": "num",
+                "datavalue": "7"
+            }
+        ],
+        "SetParametersFixedPoint_custom": [
+            {
+                "name": "7",
+                "datatype": "num",
+                "datavalue": "7"
+            }
+        ],
+        "SetParametersFixedPoint_Custom_num": 1,
+        "User_custom": [
+            {
+                "name": "9",
+                "datatype": "num",
+                "datavalue": "9"
+            }
+        ],
+        "User_Custom_num": 1,
+        "x": 490,
+        "y": 320,
+        "wires": [
+            [
+                "e15e04c088e734ac"
+            ],
+            [
+                "c829d95e142ffec3"
+            ],
+            [
+                "eecf703943ad88cd"
+            ],
+            [
+                "b6219e3f1d8d3843"
+            ]
+        ]
+    },
+    {
+        "id": "30f5361cebd0a311",
+        "type": "serial-port",
+        "serialport": "COM2",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "500",
+        "bin": "bin",
+        "out": "time",
+        "addchar": "",
+        "responsetimeout": "10000"
+    }
+]
